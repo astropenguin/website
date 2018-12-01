@@ -57,11 +57,12 @@ footer   = []
 titleSeparator = "-"
 
 [params.social]
-email    = "taniguchi@a.phys.nagoya-u.ac.jp"
-facebook = "akio.taniguchi.dr"
-github   = "astropenguin"
-gitlab   = "astropenguin"
-twitter  = "astropengu_in"
+email     = "taniguchi@a.phys.nagoya-u.ac.jp"
+github    = "astropenguin"
+gitlab    = "astropenguin"
+facebook  = "akio.taniguchi.dr"
+twitter   = "astropengu_in"
+instagram = "astropengu_in"
 
 [params.comments]
 enable = false

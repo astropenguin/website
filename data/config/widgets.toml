@@ -5,7 +5,7 @@ logo        = "/images/logo.png"
 
 [recent_posts]
 title        = ""
-length       = 5
+length       = 10
 excludeTypes = ["page"]
 
 [search]
@@ -17,7 +17,7 @@ mirror = "main"
 
 [social_menu]
 title     = ""
-platforms = ["email", "github", "gitlab", "facebook", "twitter", "google_scholar"]
+platforms = ["email", "github", "gitlab", "facebook", "twitter", "instagram", "google_scholar"]
 
 [taxonomy_cloud]
 title    = "Tags"
