@@ -41,7 +41,7 @@ code {
 .sidebar {
     position: -webkit-sticky;
     position: sticky;
-    width: 250px;
+    width: 270px;
     left: auto;
     top: auto;
 }
@@ -60,7 +60,7 @@ code {
 
 @media screen and (min-width: 920px) {
     .main {
-        margin-left: 250px !important;
-        width: 670px !important; /* 920 - 250 */
+        margin-left: 270px !important;
+        width: 650px !important; /* 920 - 270 */
     }
 }
