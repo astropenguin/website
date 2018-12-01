@@ -32,7 +32,7 @@ customCSS = ["css/custom.css"]
 customJS  = ["js/custom.js"]
 
 [params.copyright]
-prefix    = "<a href=/>astropenguin</a>"
+prefix    = "<a href=/>Astropenguin</a>"
 holder    = "Akio Taniguchi"
 startYear = "2018"
 suffix    = ""
