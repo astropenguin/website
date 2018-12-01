@@ -25,6 +25,13 @@ VS Code で日本語入力して GitHub にプッシュしたら、以下のよ�
 
 さらに、VS Code の拡張機能 [Remove backspace control character](https://marketplace.visualstudio.com/items?itemName=satokaz.vscode-bs-ctrlchar-remover) をインストールすることによって、
 万一制御文字が紛れ込んだ場合も保存時に自動的に削除されるようにしておく。
+例えば、ファイルの保存時に削除するのであれば、以下のように設定しておけば良い。
+
+```json
+{
+    "editor.formatOnSave": true
+}
+```
 
 ## References
 
