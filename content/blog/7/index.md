@@ -1,14 +1,14 @@
 +++
 title = "IPython shell で tee を実現する"
 date  = 2018-12-01T23:54:06+09:00
-tags  = ["Tips", "Advent calendar"]
+tags  = ["Tips", "Advent calendar", "Python", "IPython"]
 emoji = true
 draft = false
 +++
 
-## TL;DR
+## TL;DR :christmas_tree:
 
-ウェブサイトへのアウトプットを軌道に乗せるため、アドベントカレンダーをやってみることにします:christmas_tree:
+ウェブサイトへのアウトプットを軌道に乗せるため、アドベントカレンダーをやってみることにします。
 というわけでこれはアドベントカレンダー1日目の記事です。
 
 Linux では標準出力をターミナルに表示しつつファイルにも保存したい時、以下のように `tee` コマンドを使いますが、これと同様の結果を IPython shell 上でも実現したい時の方法をまとめておきます。
