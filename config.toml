@@ -8,6 +8,9 @@ enableEmoji           = true
 Paginate              = 10
 preserveTaxonomyNames = true
 
+# Google Analytics
+googleAnalytics = "UA-130243023-1"
+
 # syntax highlight
 pygmentsCodefences = true
 pygmentsStyle      = "manni"
