@@ -9,7 +9,7 @@ draft = false
 ## TL;DR :christmas_tree:
 
 これはアドベントカレンダーの5日目の記事です。
-今日は天文データセンター (ADC) の[多波長データ解析システム (MDAS)](https://www.adc.nao.ac.jp/MDAS/mdas_j.html) に Linuxbrew をインストールする際の手順をまとめました。
+今日は天文データセンター (ADC) の[多波長データ解析システム (MDAS)](https://www.adc.nao.ac.jp/MDAS/mdas_j.html) に [Linuxbrew](http://linuxbrew.sh/) をインストールする際の手順をまとめました。
 
 ## Linuxbrew on ADC/MDAS
 
