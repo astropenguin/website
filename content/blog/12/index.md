@@ -42,3 +42,4 @@ $ echo 'export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/share/pkgconfig' >> ~/.bash
 ## References
 
 + [tmux/tmux: tmux source code](https://github.com/tmux/tmux)
++ [Linuxbrew: "Package bash\-completion was not found\.\.\." at command prompt\. · Issue \#46 · Linuxbrew/legacy\-linuxbrew](https://github.com/Linuxbrew/legacy-linuxbrew/issues/46)
