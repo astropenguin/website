@@ -20,6 +20,10 @@ p {
     text-align: justify;
 }
 
+strong {
+    font-weight: 600 !important;
+}
+
 code {
     border: 0px;
 }
