@@ -25,12 +25,6 @@ Hugo Static Site Generator v0.52/extended darwin/amd64 BuildDate: unknown
 ```
 
 ここでは v0.52 であることが確認できました。
-以下では、特に断りがなければ website ディレクトリで各種コマンドを実行しています。
-
-```shell
-$ pwd
-/path/to/website
-```
 
 ## Create an empty website
 
@@ -57,6 +51,13 @@ $ tree -a -L 1
 ├── layouts
 ├── static
 └── themes
+```
+
+以下では、特に断りがなければ website ディレクトリで各種コマンドを実行しています。
+
+```shell
+$ pwd
+/path/to/website
 ```
 
 トップの6個のディレクトリは空でも Git に管理されるように .gitkeep という空のファイルを追加しておきます。
