@@ -1,11 +1,11 @@
+# ------------------------------
 # hugo
-# - - - - - - - - - - - - - - -
-title                 = "Astropenguin"
-baseURL               = "https://astropengu.in/"
-hasCJKLanguage        = true
-theme                 = "minimo"
-enableEmoji           = true
-Paginate              = 10
+# ------------------------------
+title = "Astropenguin"
+baseURL = "https://astropengu.in/"
+theme = "minimo"
+hasCJKLanguage = true
+enableEmoji = true
 preserveTaxonomyNames = true
 
 # Google Analytics
@@ -13,7 +13,7 @@ googleAnalytics = "UA-130243023-1"
 
 # syntax highlight
 pygmentsCodefences = true
-pygmentsStyle      = "manni"
+pygmentsStyle = "manni"
 
 [taxonomies]
 tag = "tags"
@@ -22,30 +22,34 @@ tag = "tags"
 page = "/:slug/"
 blog = "/:section/:filename/"
 
+[blackfriday]
+hrefTargetBlank = true
 
+
+# ------------------------------
 # minimo theme
-# - - - - - - - - - - - - - - -
+# ------------------------------
 [params.info]
 description = "Akio Taniguchi's website"
-title404    = "404: Nothing is here!"
+title404 = "404: Nothing is here!"
 
 [params.assets]
-favicon   = "favicon.ico"
+favicon = "favicon.ico"
 customCSS = ["css/custom.css"]
-customJS  = ["js/custom.js"]
+customJS = ["js/custom.js"]
 
 [params.copyright]
-prefix    = "<a href=/>Astropenguin</a>"
-holder    = "Akio Taniguchi"
+prefix = "<a href=/>Astropenguin</a>"
+holder = "Akio Taniguchi"
 startYear = "2018"
-suffix    = ""
+suffix = ""
 
 [params.settings]
-accentColor         = "#ffcd00"
-showReadingTime     = true
-dateFormat          = "2006-01-02"
-listDateFormat      = "2006-01-02"
-archiveDateFormat   = "2006-01-02"
+accentColor = "#ffcd00"
+showReadingTime = true
+dateFormat = "2006-01-02"
+listDateFormat = "2006-01-02"
+archiveDateFormat = "2006-01-02"
 hideEntryNavigation = ["page"]
 
 [params.sidebar]
@@ -53,18 +57,18 @@ enable = true
 
 [params.widgets]
 homepage = ["recent_posts"]
-sidebar  = ["about", "sidebar_menu", "taxonomy_cloud", "search", "social_menu"]
-footer   = []
+sidebar = ["about", "sidebar_menu", "taxonomy_cloud", "search", "social_menu"]
+footer = []
 
 [params.seo]
 titleSeparator = "-"
 
 [params.social]
-email     = "taniguchi@a.phys.nagoya-u.ac.jp"
-github    = "astropenguin"
-gitlab    = "astropenguin"
-facebook  = "akio.taniguchi.dr"
-twitter   = "astropengu_in"
+email = "taniguchi@a.phys.nagoya-u.ac.jp"
+github = "astropenguin"
+gitlab = "astropenguin"
+facebook = "akio.taniguchi.dr"
+twitter = "astropengu_in"
 instagram = "astropengu_in"
 
 [params.comments]
