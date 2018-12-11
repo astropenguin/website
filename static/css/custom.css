@@ -1,5 +1,5 @@
 /* preferences */
-body  {
+body {
     font-size: 100%;
 }
 
@@ -26,6 +26,10 @@ strong {
 
 code {
     border: 0px;
+}
+
+blockquote {
+    font-size: 100%;
 }
 
 .highlight {
