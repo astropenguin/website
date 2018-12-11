@@ -11,6 +11,9 @@ preserveTaxonomyNames = true
 # Google Analytics
 googleAnalytics = "UA-130243023-1"
 
+# Disqus
+disqusShortname = "astropenguin"
+
 # syntax highlight
 pygmentsCodefences = true
 pygmentsStyle = "manni"
@@ -72,7 +75,7 @@ twitter = "astropengu_in"
 instagram = "astropengu_in"
 
 [params.comments]
-enable = false
+enable = true
 
 [params.search]
 client = "fuse"
