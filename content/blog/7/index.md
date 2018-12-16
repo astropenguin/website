@@ -1,7 +1,8 @@
 +++
 title = "IPython shell で tee を実現する"
 date  = 2018-12-01T23:54:06+09:00
-tags  = ["Tips", "Advent calendar", "Python", "IPython"]
+tags  = ["Advent calendar", "Python", "IPython"]
+categories = ["Tech"]
 emoji = true
 draft = false
 +++

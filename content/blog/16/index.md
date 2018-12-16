@@ -1,7 +1,8 @@
 +++
 title = "Hugo を使ったウェブサイトの作成: ウェブサイトの設定"
 date  = 2018-12-10T22:50:44+09:00
-tags  = ["Advent calendar", "Hugo", "Git", "GitHub", "Memo"]
+tags  = ["Advent calendar", "Hugo", "Git", "GitHub"]
+categories = ["Tech"]
 emoji = true
 draft = false
 +++

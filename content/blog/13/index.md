@@ -1,7 +1,8 @@
 +++
 title = "Slack のカスタムテーマの設定"
 date  = 2018-12-07T09:51:31+09:00
-tags  = ["Advent calendar", "Slack", "Memo"]
+tags  = ["Advent calendar", "Slack"]
+categories = ["Tech"]
 emoji = true
 draft = false
 +++

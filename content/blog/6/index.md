@@ -1,7 +1,8 @@
 +++
 title = "Radio Astro Tools"
 date  = 2018-12-01T22:44:51+09:00
-tags  = ["Memo", "Python"]
+tags  = ["Python"]
+categories = ["Tech"]
 emoji = true
 draft = false
 +++

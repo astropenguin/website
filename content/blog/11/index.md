@@ -1,7 +1,8 @@
 +++
 title = "ADC/MDAS への Linuxbrew のインストール"
 date  = 2018-12-05T18:18:49+09:00
-tags  = ["Advent calendar", "Linux", "Linuxbrew", "Memo"]
+tags  = ["Advent calendar", "Linux", "Linuxbrew"]
+categories = ["Tech"]
 emoji = true
 draft = false
 +++

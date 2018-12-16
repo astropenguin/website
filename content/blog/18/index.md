@@ -1,7 +1,8 @@
 +++
 title = "Python 製ジオコーディングライブラリ Geocoder を試す"
 date  = 2018-12-12T01:51:14+09:00
-tags  = ["Advent calendar", "Python", "Geocoder", "Azely", "Memo"]
+tags  = ["Advent calendar", "Python", "Geocoder", "Azely"]
+categories = ["Tech"]
 emoji = true
 draft = false
 +++

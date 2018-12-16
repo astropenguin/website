@@ -1,7 +1,8 @@
 +++
 title = "Python のコンテキストマネージャを使った複数行の時間計測"
 date  = 2018-12-04T21:35:49+09:00
-tags  = ["Advent calendar", "Python", "Tips"]
+tags  = ["Advent calendar", "Python"]
+categories = ["Tech"]
 emoji = true
 draft = false
 +++

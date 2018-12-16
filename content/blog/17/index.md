@@ -1,7 +1,8 @@
 +++
 title = "プログラミング用フォント Ricty のインストール"
 date  = 2018-12-11T23:06:55+09:00
-tags  = ["Advent calendar", "Ricty", "Homebrew", "Memo"]
+tags  = ["Advent calendar", "Ricty", "Homebrew"]
+categories = ["Tech"]
 emoji = true
 draft = false
 +++

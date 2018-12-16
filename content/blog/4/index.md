@@ -1,7 +1,8 @@
 +++
 title = "rsync を使った転送・バックアップ"
 date  = 2018-12-01T18:41:26+09:00
-tags  = ["Linux", "Tips"]
+tags  = ["Linux"]
+categories = ["Tech"]
 emoji = true
 draft = false
 +++

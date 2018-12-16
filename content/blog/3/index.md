@@ -1,7 +1,8 @@
 +++
 title = "畳み込みによる画像のノイズ除去"
 date  = 2018-12-01T18:40:47+09:00
-tags  = ["Python", "NumPy", "SciPy", "Tips"]
+tags  = ["Python", "NumPy", "SciPy"]
+categories = ["Tech"]
 emoji = true
 draft = false
 +++
