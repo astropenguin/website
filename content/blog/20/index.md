@@ -99,7 +99,8 @@ Installed kernelspec python3 in /path/to/env/.venv/share/jupyter/kernels/python3
 
 :penguin: [astropenguin/pipenv\-ipython\-jupyter: Demo of IPython/Jupyter custom config management by Python\-pipenv](https://github.com/astropenguin/pipenv-ipython-jupyter)
 
-これを clone したのち、以下の通りに実行すると、上記の諸々の設定が自動で行われます。
+このレポジトリには、etc/configure に一連のスクリプトが記述されています。
+レポジトリを clone したのち、以下の通りに実行すると、上記の諸々の設定が自動で行われます。
 
 ```shell
 $ pipenv install
