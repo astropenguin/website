@@ -30,7 +30,7 @@ $ pipenv install ipython jupyter
 ## IPython profile
 
 IPython 関連は、プロファイルと呼ばれるディレクトリとファイル群によって設定されます。
-通常これは `ipython profile create default` によって、~/.ipython/profile_default に作成されることが多いと思いますが (多くの記事もこれに従っているはず) 、何もしないと仮想環境でもこれを引き継いで使ってしまうため、あまり使い勝手がよくありません。
+通常これは `ipython profile create default` によって、~/.ipython/profile_default に作成されることが多いと思いますが、何もしないと仮想環境でもこれを引き継いで使ってしまうため、あまり使い勝手がよくありません。
 そこで、env 以下にプロファイルを作成し、これを読み込むように pipenv を設定します。
 
 まず、.env ファイルに以下の環境変数を書き込むことで、pipenv 実行時には env/.ipython が ~/.ipython の代わりに IPython ディレクトリとして使われるようになります。
@@ -115,5 +115,5 @@ $ pipenv run configure
 + [Installing the IPython kernel -- IPython documentation](https://ipython.readthedocs.io/en/stable/install/kernel_install.html)
 + [Custom Script Shortcuts — pipenv documentation](https://pipenv.readthedocs.io/en/latest/advanced/#custom-script-shortcuts)
 + [Automatic Loading of .env -- pipenv documentation](https://pipenv.readthedocs.io/en/latest/advanced/#automatic-loading-of-env)
-+ [astropenguin/pipenv\-ipython\-jupyter: Demo of IPython/Jupyter custom config management by Python\-pipenv](https://github.com/astropenguin/pipenv-ipython-jupyter)
 + [2018年の Python プロジェクトのはじめかた \- Qiita](https://qiita.com/sl2/items/1e503952b9506a0539ea)
++ [astropenguin/pipenv\-ipython\-jupyter: Demo of IPython/Jupyter custom config management by Python\-pipenv](https://github.com/astropenguin/pipenv-ipython-jupyter)
