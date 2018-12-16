@@ -48,7 +48,7 @@ tag = "tags"
 # 記事の URL 設定
 [permalinks]
 page = "/:slug/"
-blog = "/:section"
+blog = "/:section/:filename/"
 
 # 外部リンクを新規タブで開く
 [blackfriday]

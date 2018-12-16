@@ -71,8 +71,8 @@ $ touch data/.gitkeep
 $ touch layouts/.gitkeep
 $ touch static/.gitkeep
 $ touch themes/.gitkeep
-$ echo public/ >> .gitignore
-$ echo resources/ >> .gitignore
+$ echo /public >> .gitignore
+$ echo /resources >> .gitignore
 ```
 
 ## Choosing a theme
