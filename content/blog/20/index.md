@@ -36,7 +36,7 @@ IPython 関連は、プロファイルと呼ばれるディレクトリとファ
 まず、.env ファイルに以下の環境変数を書き込むことで、pipenv 実行時には env/.ipython が ~/.ipython の代わりに IPython ディレクトリとして使われるようになります。
 
 ```shell
-$ echo 'IPYTHONDIR=.ipython' >> .env
+$ echo IPYTHONDIR=`pwd`/.ipython >> .env
 ```
 
 この状態で以下のようにプロファイルを作成することで、env/.ipython/profile_default が作成されます。
