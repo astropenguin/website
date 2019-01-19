@@ -11,7 +11,7 @@ draft = false
 
 タイムゾーンを扱う Python パッケージを開発した際に調べた情報をまとめておきます。
 そもそも Python におけるタイムゾーンは、tzinfo と呼ばれるオブジェクトによって表現されます。
-これは、標準ライブラリの `datetime.tzinfo` クラスのサブクラスとして、標準ライブラリの `datetime.timezone` や外部ライブラリ `pytz` によって提供されています。
+これは、標準ライブラリの `datetime.tzinfo` クラスのサブクラスとして、標準ライブラリの `datetime.timezone` や外部ライブラリ pytz によって提供されています。
 
 以下では、これらを使ってどのように tzinfo を取得・使用できるのかを紹介します。
 その際、Python スクリプトでは以下のようなインポートを仮定しています。
@@ -23,18 +23,18 @@ draft = false
 >>> from datetime import datetime, timedelta, timezone, tzinfo
 ```
 
-このうち、`pytz`・`geocoder`・`timezonefinder`は外部ライブラリです。
-ただし、`pytz` は Python documentation でも紹介されているように、ほとんど標準ライブラリ的な扱いをされていると思われます。
+このうち、pytz・geocoder・timezonefinder は外部ライブラリです。
+ただし、pytz は Python documentation でも紹介されているように、ほとんど標準ライブラリ的な扱いをされていると思われます。
 
 ## How to get tzinfo
 
 ここでは tzinfo を様々な方法で取得する方法をまとめます。
-ここでは `tzinfo` クラスと区別するため、取得したオブジェクトの変数名は `tz` として書いています。
+ここでは `datetime.tzinfo` クラスと区別するため、取得したオブジェクトの変数名は `tz` として書いています。
 
 ### タイムゾーン ID から指定する
 
 まずはベーシックな方法から。
-例えば、日本のタイムゾーン ID は `Asia/Tokyo` なので、以下のように tzinfo を取得します。
+例えば、日本のタイムゾーン ID は Asia/Tokyo なので、以下のように tzinfo を取得します。
 
 ```python
 >>> query = 'Asia/Tokyo'
@@ -75,7 +75,7 @@ datetime.timezone(datetime.timedelta(0, 32400))
 ### 経度緯度から求める
 
 実際の開発では、ある場所の経度緯度からタイムゾーンを求めたい場合も多いと思います。
-その際は、外部ライブラリ `timezonefinder` を使うことで簡単に取得できます。
+その際は、外部ライブラリ timezonefinder を使うことで簡単に取得できます。
 
 ```python
 >>> query = {'lng': 135, 'lat': 35}
@@ -85,7 +85,7 @@ datetime.timezone(datetime.timedelta(0, 32400))
 <DstTzInfo 'Asia/Tokyo' LMT+9:19:00 STD>
 ```
 
-ちなみに、検索すると `pytzwhere` を使用している例を見かけますが、`timezonefinder` の方が省メモリかつ高速だそうです。
+ちなみに、検索すると pytzwhere を使用している例を見かけますが、timezonefinder の方が省メモリかつ高速だそうです。
 最近の開発もこちらの方が活発っぽいので、これを使っておくのが良さそうです。
 
 + [Comparison to pytzwhere - MrMinimal64/timezonefinder](https://github.com/MrMinimal64/timezonefinder#comparison-to-pytzwhere)
@@ -93,7 +93,7 @@ datetime.timezone(datetime.timedelta(0, 32400))
 ### 場所名から求める
 
 さらに、ある場所名から直接タイムゾーンを求めたい場合、場所名→経度緯度への変換を何かしらの方法で行う必要があります。
-ここでは、[OpenStreetMap](https://openstreetmap.jp/) からジオコーディングが可能な `geocoder` を使った例を紹介します。
+ここでは、[OpenStreetMap](https://openstreetmap.jp/) からジオコーディングが可能な geocoder を使った例を紹介します。
 
 ```python
 >>> query = '名古屋市'
@@ -169,7 +169,7 @@ Python の日付は、`datetime.datetime` に tzinfo を指定しない場合は
 datetime.datetime(2019, 1, 1, 0, 0) # timezone-naive
 ```
 
-timezone-aware なオブジェクトは、以下のように `tz.localize` メソッドに timezone-naive なオブジェクトを与えてあげることで作成します。
+timezone-aware なオブジェクトは、以下のように `localize` メソッドに timezone-naive なオブジェクトを与えてあげることで作成します。
 オブジェクトを表示すると、tzinfo が含まれていることが分かります。
 
 ```python
@@ -201,3 +201,8 @@ datetime.datetime(2018, 12, 31, 23, 0, tzinfo=<UTC>)
 >>> dt_aware.astimezone()
 datetime.datetime(2019, 1, 1, 8, 0, tzinfo=datetime.timezone(datetime.timedelta(0, 32400), 'JST'))
 ```
+
+## References
+
++ [datetime --- 基本的な日付型および時間型 — Python documentation](https://docs.python.org/ja/3/library/datetime.html)
++ [Python 製ジオコーディングライブラリ Geocoder を試す - Astropenguin](https://astropengu.in/blog/18/)
