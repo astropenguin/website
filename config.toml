@@ -18,6 +18,9 @@ disqusShortname = "astropenguin"
 pygmentsCodefences = true
 pygmentsStyle = "manni"
 
+# use git for lastmod date
+enableGitInfo = true
+
 [taxonomies]
 tag = "tags"
 category = "categories"
@@ -51,6 +54,7 @@ suffix = ""
 [params.settings]
 accentColor = "#ffcd00"
 showReadingTime = true
+showLastmod = true
 dateFormat = "2006-01-02"
 listDateFormat = "2006-01-02"
 archiveDateFormat = "2006-01-02"
@@ -61,6 +65,7 @@ enable = true
 
 [params.widgets]
 homepage = ["recent_posts"]
+header = []
 sidebar = ["about", "sidebar_menu", "taxonomy_cloud", "search", "social_menu"]
 footer = []
 
