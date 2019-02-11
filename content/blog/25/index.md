@@ -5,6 +5,7 @@ tags  = ["Python", "datetime", "timezone"]
 categories  = ["Tech"]
 emoji = true
 draft = false
+toc = true
 +++
 
 ## TL;DR :bamboo:
@@ -28,7 +29,7 @@ draft = false
 
 ## How to get tzinfo
 
-ここでは tzinfo を様々な方法で取得する方法をまとめます。
+tzinfo を様々な方法で取得する方法をまとめます。
 ここでは `datetime.tzinfo` クラスと区別するため、取得したオブジェクトの変数名は `tz` として書いています。
 
 ### タイムゾーン ID から指定する
@@ -101,6 +102,7 @@ datetime.timezone(datetime.timedelta(0, 32400))
 >>> lnglat = {'lng': g.lng, 'lat': g.lat}
 >>> tf = TimezoneFinder()
 >>> tz = pytz.timezone(tf.timezone_at(**lnglat))
+>>> tz
 <DstTzInfo 'Asia/Tokyo' LMT+9:19:00 STD>
 ```
 
@@ -125,7 +127,7 @@ datetime.timezone(datetime.timedelta(0, 32400))
 
 ## How to use tzinfo
 
-ここでは取得した tzinfo (`tz`) の実際の使い方をまとめます。
+取得した tzinfo (`tz`) の実際の使い方をまとめます。
 まず、上でどの手法で取得した `tz` も `datetime.tzinfo` のサブクラスであることを確認しておきましょう。
 
 ```python
