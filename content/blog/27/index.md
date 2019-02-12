@@ -30,8 +30,7 @@ $ curl -sS https://github.com/astropenguin.keys >> ~/.ssh/authorized_keys
 まず、クライアント上で新規鍵を作成します。
 この際、デフォルトでは RSA 2048 bit の鍵長となるので、以下のように明示的に変更します。
 
-```
-shell
+```shell
 $ cd ~/.ssh
 $ ssh-keygen -t rsa -b 4096 -C user@host -f test_rsa
 ```
@@ -60,7 +59,7 @@ $ cat test_rsa.pub | pbcopy
 ```
 
 次に、ブラウザで https://github.com/settings/keys を開き、 **New SSH Key** から公開鍵を登録します。
-Title の部分には鍵のコメント (user@host) を書いておくと良いでしょう。
+Title の部分には鍵のコメント (user@host) を書いておくと良いでしょう[^3]。
 
 ![](new_ssh_key.png)
 
@@ -72,6 +71,8 @@ $ ssh -T -i test_rsa git@github.com
 Hi astropenguin! You've successfully authenticated,
 but GitHub does not provide shell access.
 ```
+
+[^3]: 何も書かないと、公開鍵に書かれたコメントが自動的に入るようです。
 
 ## References
 
