@@ -7,7 +7,7 @@ emoji = true
 draft = false
 +++
 
-## TL;DR
+## TL;DR :snowman:
 
 Matplotlib でプロット以外の余白部分を透明にした図を保存する際のメモです。
 何も考えずに `plt.savefig(..., transparent=True)` としてしまうと、以下のようにプロット部分も透明になってしまいます。
