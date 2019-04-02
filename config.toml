@@ -1,22 +1,17 @@
 # ------------------------------
 # hugo
 # ------------------------------
-title = "Astropenguin"
+title = "astropenguin"
 baseURL = "https://astropengu.in/"
-theme = "minimo"
+theme = "hugo-theme-hello-friend"
 hasCJKLanguage = true
 enableEmoji = true
-preserveTaxonomyNames = true
 
 # Google Analytics
 googleAnalytics = "UA-130243023-1"
 
 # Disqus
 disqusShortname = "astropenguin"
-
-# syntax highlight
-pygmentsCodefences = true
-pygmentsStyle = "manni"
 
 # use git for lastmod date
 enableGitInfo = true
@@ -34,54 +29,23 @@ hrefTargetBlank = true
 
 
 # ------------------------------
-# minimo theme
+# hello friend theme
 # ------------------------------
-[params.info]
-description = "Akio Taniguchi's website"
-title404 = "404: Nothing is here!"
-
-[params.assets]
-favicon = "favicon.ico"
-customCSS = ["css/custom.css"]
-customJS = ["js/custom.js"]
-
-[params.copyright]
-prefix = "<a href=/>Astropenguin</a>"
-holder = "Akio Taniguchi"
-startYear = "2018"
-suffix = ""
-
-[params.settings]
-accentColor = "#ffcd00"
+[params]
+contentTypeName = "blog"
+defaultTheme = "light"
+showMenuItems = 5
 showReadingTime = true
-showLastmod = true
-dateFormat = "2006-01-02"
-listDateFormat = "2006-01-02"
-archiveDateFormat = "2006-01-02"
-hideEntryNavigation = ["page"]
 
-[params.sidebar]
-enable = true
+[params.logo]
+logoText = "astropenguin"
 
-[params.widgets]
-homepage = ["recent_posts"]
-header = []
-sidebar = ["about", "sidebar_menu", "taxonomy_cloud", "search", "social_menu"]
-footer = []
+[[menu.main]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/astropenguin"
 
-[params.seo]
-titleSeparator = "-"
-
-[params.social]
-email = "taniguchi@a.phys.nagoya-u.ac.jp"
-github = "astropenguin"
-gitlab = "astropenguin"
-facebook = "akio.taniguchi.dr"
-twitter = "astropengu_in"
-instagram = "astropengu_in"
-
-[params.comments]
-enable = true
-
-[params.search]
-client = "fuse"
+[[menu.main]]
+identifier = "twitter"
+name = "Twitter"
+url = "https://twitter.com/astropengu_in"
