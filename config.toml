@@ -4,6 +4,8 @@
 title = "astropenguin"
 baseURL = "https://astropengu.in/"
 theme = "hugo-theme-hello-friend"
+languageCode = "ja"
+defaultContentLanguage = "ja"
 hasCJKLanguage = true
 enableEmoji = true
 
