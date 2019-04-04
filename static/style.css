@@ -25,6 +25,11 @@ p, li, td {
     top: 0;
 }
 
+/* color of logo cursur */
+.logo__cursor {
+    background: #ffcc66;
+}
+
 /* twemoji */
 img.emoji {
   height: 1em;
