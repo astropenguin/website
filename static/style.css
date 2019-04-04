@@ -1,3 +1,4 @@
+/* font size */
 p, li, td {
     font-weight: normal;
 }
@@ -16,9 +17,18 @@ p, li, td {
     }
 }
 
+/* sticky header */
 .header {
     position: -webkit-sticky;
     position: sticky;
     z-index: 100;
     top: 0;
+}
+
+/* twemoji */
+img.emoji {
+  height: 1em;
+  width: 1em;
+  display: inline;
+  vertical-align: -0.1em;
 }
