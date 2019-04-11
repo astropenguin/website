@@ -3,7 +3,7 @@ p, li, td {
     font-weight: normal;
 }
 
-.post-content {
+.post-content, .post-title {
     font-weight: normal;
 }
 
@@ -23,6 +23,7 @@ p, li, td {
     position: sticky;
     z-index: 100;
     top: 0;
+    padding: 15px;
 }
 
 /* color of logo cursur */
