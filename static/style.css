@@ -1,8 +1,12 @@
 /* font styles of contents */
 .post-content, .post-title {
-    text-align: justify;
     font-weight: normal;
     font-feature-settings: "palt", "zero";
+}
+
+.post-content {
+    text-align: justify;
+    line-height: 1.8em;
 }
 
 /* font size of titles */
