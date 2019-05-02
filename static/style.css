@@ -1,0 +1,41 @@
+/* font styles of contents */
+.post-content, .post-title {
+    text-align: justify;
+    font-weight: normal;
+    font-feature-settings: "palt", "zero";
+}
+
+/* font size of titles */
+.post-title {
+    font-size: 2rem;
+}
+
+@media (max-width: 683px) {
+    .post-title {
+        font-size: 1.4rem;
+    }
+}
+
+/* sticky header */
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    padding: 15px;
+}
+
+/* color of logo cursur */
+.logo__cursor {
+    background: #ffcc66;
+    width: 8px;
+    animation-duration: 2s;
+}
+
+/* twemoji */
+img.emoji {
+  height: 1em;
+  width: 1em;
+  display: inline;
+  vertical-align: -0.1em;
+}
