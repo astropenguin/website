@@ -4,8 +4,6 @@
 title = "Astropenguin"
 baseURL = "https://astropengu.in/"
 theme = "hugo-theme-hello-friend"
-languageCode = "ja"
-defaultContentLanguage = "ja"
 preserveTaxonomyNames = true
 hasCJKLanguage = true
 enableEmoji = true
