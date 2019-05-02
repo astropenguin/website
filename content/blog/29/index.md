@@ -78,7 +78,7 @@ Dimensionsは軸名と軸の値を持つラベルとして、1次元のDataArray
 | | xarray | pandas |
 | --- | --- | --- |
 | 次元軸 | Dimension(s) (`xr.DataArray`) | n/a |
-| ラベル | Coordinate(s) (`xr.DataArray`) | Index (`pd.Index`) or MultiIndex (`pd.MultiIndex`) |
+| ラベル | Coordinate(s) (`xr.DataArray`) | (Multi)Index (`pd.(Multi)Index`) |
 | データ | DataArray (`xr.DataArray`) | Series (`pd.Series`) |
 | データセット | Dataset (`xr.Dataset`) | DataFrame (`pd.DataFrame`) |
 
