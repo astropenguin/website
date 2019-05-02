@@ -20,6 +20,11 @@
     }
 }
 
+/* table layout */
+table{
+    table-layout: auto;
+}
+
 /* sticky header */
 .header {
     position: -webkit-sticky;
