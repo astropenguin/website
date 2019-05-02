@@ -8,8 +8,9 @@ categories  = ["Tech"]
 ## TL;DR :flags:
 
 [xarray]はラベル付き多次元配列のセットを扱うためのPythonパッケージで、[PyData]によって開発されています。
-Pythonにはもともと、多次元配列を効率的に扱うことのできる[NumPy]、ラベル付き1次元配列（系列データ）のセットを扱う[pandas]がありましたが、xarrayはpandasの多次元版と考えることができます。
-実際、pandasには2次元配列のセットと扱うための[Panel](https://pandas.pydata.org/pandas-docs/stable/reference/panel.html)と呼ばれるデータ構造がありましたが、xarrayの登場によってdeprecatedとなり、代わりに`to_xarray()`メソッドが`pd.DataFrame`に追加されることで移行が促されています。
+Pythonにはもともと、多次元配列を効率的に扱うことのできる[NumPy]、ラベル付き1次元配列（系列データ）のセットを扱う[pandas]があり、xarrayはpandasの多次元版と考えることができます。
+xarrayは最初のリリースが2014年と比較的新しいですが、pandas側でもxarrayの利用を促しているようです。
+実際、pandasには2次元配列のセットと扱うための[Panel](https://pandas.pydata.org/pandas-docs/stable/reference/panel.html)と呼ばれるデータ構造がありましたが、xarrayの登場によってdeprecatedとなり、代わりに`to_xarray()`メソッドが`pd.DataFrame`に追加されています。
 
 > Panel was deprecated in the 0.20.x release, showing as a DeprecationWarning.
 > Using Panel will now show a FutureWarning. The recommended way to represent 3-D data are with a MultiIndex on a DataFrame via the to_frame() or with the xarray package.
@@ -19,7 +20,7 @@ Pythonにはもともと、多次元配列を効率的に扱うことのでき�
 
 こうした背景の一方、xarrayはpandasほど使われていないのかなあという印象です。
 例えば、Google Trendsによると、pandasとxarrayの検索数には大きな開きがあることが分かります。
-また、実際xarrayを紹介している記事等も（日本語、英語ともに）pandasのそれと比べて圧倒的に少ないです。
+xarrayを紹介している記事等も（日本語、英語ともに）pandasのそれと比べて圧倒的に少ないです。
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1754_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"pandas","geo":"","time":"today 5-y"},{"keyword":"xarray","geo":"","time":"today 5-y"}],"category":31,"property":""}, {"exploreQuery":"cat=31&date=today%205-y&q=pandas,xarray","guestPath":"https://trends.google.co.jp:443/trends/embed/"}); </script>
 
@@ -27,7 +28,7 @@ Pythonにはもともと、多次元配列を効率的に扱うことのでき�
 しかし、研究分野の測定データは多次元に普通になり得ますし、データには測定時刻や座標等のラベルが付くことがほとんどですので、ラベル付き多次元配列というのは結構需要があるはずです。
 
 そこで、この記事を含む一連の記事では、xarrayについて（自分の理解を深める意味でも）紹介します。
-タイトルの通り、xarrayのデータ構造やメソッドはpandasのそれと共通する部分が多いので、これらを比較してまとめることにします。
+タイトルの通り、xarrayのデータ構造やメソッドはpandasのそれと共通する部分が多いので、これらを比較してまとめるのが良さそうです。
 今回の記事ではxarrayのデータ構造のみの紹介です。
 
 ## Scope
@@ -66,7 +67,7 @@ xarrayでは、pandasの系列データ（`pd.Series`）に相当するデータ
 pandasでは特定の系列データをラベル（`pd.Index`）に割り当てますが、xarrayでも同様に、特定の（複数も可）DataArrayをラベル化することができます。
 この図では、気温と降水量が測定データなので、この2つ以外の全ての要素を割り当てるのが良さそうです。
 ラベル化されたDataArray(s)は**coordinate(s)**と特別に呼ばれます。
-一方、xarrayではラベル化によってオブジェクトが変化する（`pd.Series`→`pd.Index`）ことはなく、あくまでDataArrayのままです。
+一方、xarrayではラベル化によってオブジェクトが変化する（i.e., `pd.Series`→`pd.Index`）ことはなく、あくまでDataArrayのままです。
 
 最後に、pandasにはない概念として、DatasetやDataArrayの各次元軸を規定する**dimension(s)**があります。
 Dimensionsは軸名と軸の値を持つラベルとして、1次元のDataArrayで表現されます。
@@ -86,7 +87,7 @@ Dimensionsは軸名と軸の値を持つラベルとして、1次元のDataArray
 
 以上を踏まえ、実際にDatasetを生成してみましょう。
 以下のスクリプトは、[xarray documentation](http://xarray.pydata.org/en/stable/data-structures.html)に記載されている例を元に、上の説明に合うように書き直したものになります。
-Dimensionsは`dims`として軸名のタプルで、coordinatesは`coords`として`name: (<dims>, <value>)`の辞書で表現されます。
+Dimensionsは`dims`として軸名のタプルで、coordinatesは`coords`として`<name>: (<dims>, <value>)`の辞書で表現されます。
 
 ```python
 # fix random seed
@@ -125,7 +126,7 @@ ds['precipitation'] = precipitation
 ### DataArray
 
 まずはDataArrayを表示させてみます。
-NumPy arrayにcoordinatesがくっついた文字列が出力されます。
+以下のように、NumPy arrayにcoordinatesがくっついた文字列が出力されます。
 (x, y, t)に注目すると、名前の横に`*`が表示されていることが分かりますが、これらのcoordinatesがdimensionsとして割り当てられていることを表しています。
 
 ```python
