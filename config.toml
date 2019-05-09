@@ -22,7 +22,6 @@ tag = "tags"
 category = "categories"
 
 [permalinks]
-page = "/:slug/"
 blog = "/:section/:filename/"
 
 [blackfriday]
@@ -34,7 +33,7 @@ hrefTargetBlank = true
 # ------------------------------
 [params]
 contentTypeName = "blog"
-defaultTheme = "light"
+defaultTheme = "dark"
 showMenuItems = 3
 showReadingTime = true
 
@@ -45,10 +44,10 @@ logoText = "astropenguin"
 identifier = "github"
 name = "GitHub"
 url = "https://github.com/astropenguin"
-weight = 5
+weight = 6
 
 [[menu.main]]
 identifier = "twitter"
 name = "Twitter"
 url = "https://twitter.com/astropengu_in"
-weight = 6
+weight = 7
