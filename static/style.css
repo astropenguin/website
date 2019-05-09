@@ -1,22 +1,38 @@
-/* font styles of contents */
-.post-content, .post-title {
+/* global font family */
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p&subset=japanese');
+
+body {
+    font-family: 'M PLUS 1p', sans-serif;
     font-weight: normal;
-    font-feature-settings: "palt", "zero";
 }
 
+/* font style of contents */
 .post-content {
     text-align: justify;
     line-height: 1.8em;
 }
 
-/* font size of titles */
-.post-title {
-    font-size: 2rem;
+/* font style of headings */
+.post-title, .archive h1 {
+    font-weight: normal;
+    font-size: 1.8rem;
 }
 
+.archive__post-title {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+
 @media (max-width: 683px) {
-    .post-title {
+    .post-title, .archive h1 {
+        font-weight: normal;
         font-size: 1.4rem;
+    }
+
+    .archive__post-title {
+        font-weight: bold;
+        font-size: 1.0rem;
     }
 }
 
@@ -31,7 +47,8 @@ table{
     position: sticky;
     z-index: 100;
     top: 0;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 /* color of logo cursur */
