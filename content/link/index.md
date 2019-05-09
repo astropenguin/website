@@ -1,6 +1,5 @@
 +++
 title  = "Link"
-menu   = "main"
-toc    = true
+menu = "main"
 weight = 4
 +++

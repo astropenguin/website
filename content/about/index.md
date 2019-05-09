@@ -1,7 +1,6 @@
 +++
 title  = "About"
-menu   = "main"
-toc    = true
+menu = "main"
 weight = 1
 +++
 
