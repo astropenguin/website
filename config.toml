@@ -40,6 +40,10 @@ showReadingTime = true
 [params.logo]
 logoText = "astropenguin"
 
+[languages]
+  [languages.en]
+    menuMore = "More"
+
 [[menu.main]]
 identifier = "github"
 name = "GitHub"
