@@ -1,10 +1,8 @@
 +++
 title = "Hugo theme を変更しました"
 date  = 2019-04-15T11:00:49+09:00
-tags  = ["Hugo"]
+tags  = ["Hugo", "Website"]
 categories  = ["Tech"]
-emoji = true
-draft = false
 +++
 
 ## TL;DR :cherry_blossom:
