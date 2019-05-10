@@ -1,8 +1,9 @@
 /* global font family */
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p&subset=japanese');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p:400,700&subset=japanese');
+@import url('https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanrp.min.css');
 
 body {
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: YakuHanRP, 'M PLUS 1p', sans-serif;
     font-weight: normal;
 }
 
