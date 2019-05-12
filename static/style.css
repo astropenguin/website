@@ -1,19 +1,25 @@
-/* global font family */
+/* global text style */
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p:400,700&subset=japanese');
 @import url('https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanrp.min.css');
 
 body {
     font-family: YakuHanRP, 'M PLUS 1p', sans-serif;
     font-weight: normal;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
-/* font style of contents */
+
+/* text style of contents */
 .post-content {
     text-align: justify;
     line-height: 1.8em;
 }
 
-/* font style of headings */
+
+/* text style of headings */
 .post-title, .archive h1 {
     font-weight: normal;
     font-size: 1.8rem;
@@ -23,7 +29,6 @@ body {
     font-weight: normal;
     font-size: 1.2rem;
 }
-
 
 @media (max-width: 683px) {
     .post-title, .archive h1 {
@@ -37,10 +42,19 @@ body {
     }
 }
 
+
+/* text style of code and link */
+code, a {
+    hyphens: none;
+    word-break: break-all;
+}
+
+
 /* table layout */
 table{
     table-layout: auto;
 }
+
 
 /* sticky header */
 .header {
@@ -52,12 +66,14 @@ table{
     padding-bottom: 15px;
 }
 
+
 /* color of logo cursur */
 .logo__cursor {
     background: #ffcc66;
     width: 8px;
     animation-duration: 2s;
 }
+
 
 /* twemoji */
 img.emoji {
