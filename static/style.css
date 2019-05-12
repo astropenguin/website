@@ -46,6 +46,9 @@ body {
 /* text style of code and link */
 code, a {
     hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
     word-break: break-all;
 }
 
