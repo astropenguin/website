@@ -59,6 +59,15 @@ table{
 }
 
 
+/* twemoji */
+img.emoji {
+  height: 1em;
+  width: 1em;
+  display: inline;
+  vertical-align: -0.1em;
+}
+
+
 /* sticky header */
 .header {
     position: -webkit-sticky;
@@ -75,13 +84,4 @@ table{
     background: #ffcc66;
     width: 8px;
     animation-duration: 2s;
-}
-
-
-/* twemoji */
-img.emoji {
-  height: 1em;
-  width: 1em;
-  display: inline;
-  vertical-align: -0.1em;
 }
