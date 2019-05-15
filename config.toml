@@ -33,7 +33,7 @@ hrefTargetBlank = true
 # ------------------------------
 [params]
 contentTypeName = "blog"
-defaultTheme = "dark"
+defaultTheme = "light"
 showMenuItems = 3
 showReadingTime = true
 
