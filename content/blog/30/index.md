@@ -15,7 +15,7 @@ Python の小ネタですが、dictionary で存在しない key にアクセス
 
 ```python
 class KeysInfoDict(dict):
-    """Dictionary that shows all existing keys when KeyError rises."""
+    """Dict that shows all keys when KeyError rises."""
     def __missing__(self, key):
         keys = ', '.join(map(repr, self))
         raise KeyError(f'Choose one from: {keys}')
