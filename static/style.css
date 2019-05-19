@@ -1,9 +1,8 @@
 /* global text style */
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p:400,700&subset=japanese');
-@import url('https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanrp.min.css');
 
 body {
-    font-family: YakuHanRP, 'M PLUS 1p', sans-serif;
+    font-family: 'M PLUS 1p', sans-serif;
     font-weight: normal;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
