@@ -5,10 +5,10 @@
 body {
     font-family: YakuHanRP, 'M PLUS 1p', sans-serif;
     font-weight: normal;
-    hyphens: auto;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 
@@ -45,11 +45,11 @@ body {
 
 /* text style of code and link */
 code, a {
-    hyphens: none;
+    word-break: break-all;
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
-    word-break: break-all;
+    hyphens: none;
 }
 
 
