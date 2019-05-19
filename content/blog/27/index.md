@@ -17,7 +17,7 @@ draft = false
 
 + 秘密鍵 (と公開鍵) の生成はクライアントごとに 1 個だけ作成する
     - この際、暗号強度は十分高める (RSA 4096 bit など)
-+ 公開鍵は GitHub で公開し、これをサーバの ~/.ssh/authorized_keys に登録する
++ 公開鍵は GitHub で公開し、これをサーバの `~/.ssh/authorized_keys` に登録する
     - 登録は、(サーバのネット接続前提だが) 以下のコマンドで行える
 
 ```shell
@@ -26,7 +26,7 @@ $ curl -sS https://github.com/astropenguin.keys >> ~/.ssh/authorized_keys
 
 ## Make an SSH key pair on client
 
-ここでは仮に test_rsa [^1]という秘密鍵を作成し、公開鍵 test_rsa.pub を公開するとします。
+ここでは仮に `test_rsa` [^1]という秘密鍵を作成し、公開鍵 `test_rsa.pub` を公開するとします。
 まず、クライアント上で新規鍵を作成します。
 この際、デフォルトでは RSA 2048 bit の鍵長となるので、以下のように明示的に変更します。
 
