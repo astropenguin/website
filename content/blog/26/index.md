@@ -4,13 +4,12 @@ date  = 2019-02-11T16:00:09+09:00
 tags  = ["Python", "matplotlib", "Visualization"]
 categories  = ["Tech"]
 emoji = true
-draft = false
 +++
 
 ## TL;DR :snowman:
 
 Matplotlib でプロット以外の余白部分を透明にした図を保存する際のメモです。
-何も考えずに `plt.savefig(..., transparent=True)` としてしまうと、以下のようにプロット部分も透明になってしまいます。
+何も考えずに `plt.savefig()` で `transparent=True` としてしまうと、以下のようにプロット部分も透明になってしまいます。
 
 | `transparent=False` | `transparent=True` |
 | --- | --- |
