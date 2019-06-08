@@ -4,6 +4,7 @@
 title = "astropengu.in"
 baseURL = "https://astropengu.in/"
 theme = "hermit"
+languageCode = "en"
 preserveTaxonomyNames = true
 hasCJKLanguage = true
 enableEmoji = true
@@ -13,10 +14,6 @@ googleAnalytics = "UA-130243023-1"
 
 # use git for lastmod date
 enableGitInfo = true
-
-# syntax highlight
-pygmentsCodefences  = true
-pygmentsUseClasses  = true
 
 [taxonomies]
 tag = "tags"
@@ -44,8 +41,9 @@ dateformShort   = "Jan 2"
 dateformNum     = "2006-01-02"
 dateformNumTime = "2006-01-02 15:04 -0700"
 
-# Add custom css
-customCSS = ["css/custom.css"]
+# custom css/js
+customCSS = ["css/custom.css", "css/prism.css"]
+customJS = ["js/twemoji.min.js", "js/prism.min.js"]
 
 # Social Icons
 [[params.social]]
