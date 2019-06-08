@@ -12,6 +12,7 @@ install:
 script:
   - hugo
   - touch public/.nojekyll
+  - echo astropengu.in > public/CNAME
 
 deploy:
   provider: pages
