@@ -11,6 +11,7 @@ install:
 
 script:
   - hugo
+  - touch public/.nojekyll
 
 deploy:
   provider: pages
