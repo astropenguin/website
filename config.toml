@@ -42,7 +42,7 @@ dateformNum     = "2006-01-02"
 dateformNumTime = "2006-01-02 15:04 -0700"
 
 # custom css/js
-customCSS = ["css/custom.css", "css/prism.css"]
+customCSS = ["css/layout.css", "css/colors.css", "css/prism.css"]
 customJS = ["js/twemoji.min.js", "js/prism.min.js", "js/scrollbar.js"]
 
 # Social Icons

@@ -1,0 +1,74 @@
+/* font */
+body {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: normal;
+    letter-spacing: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace;
+}
+
+#site-header, #home-footer {
+    white-space: nowrap;
+}
+
+/* hyphenation */
+body {
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+code, a {
+    word-break: break-all;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* content layout */
+.content {
+    text-align: justify;
+    line-height: 1.8rem;
+}
+
+.content > * {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-nav span {
+    font-size: 1.0rem;
+}
+
+.post-meta span {
+    font-size: 1.0rem;
+}
+
+/* elements */
+h1 {
+    font-size: 2.0rem;
+    font-weight: normal;
+}
+
+hr {
+    width: 100% !important;
+    border-bottom-width: 2px !important;
+    border-bottom-style: dotted !important;
+}
+
+blockquote {
+    border-left-width: 2px;
+}
+
+img.emoji {
+    height: 1em;
+    width: 1em;
+    display: inline;
+    vertical-align: -0.1em;
+}
