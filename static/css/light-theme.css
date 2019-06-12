@@ -1,0 +1,28 @@
+html {
+    background-color: #292a2d;
+}
+
+code {
+    background-color: #3b3d42;
+}
+
+#site-header {
+    background-color: #252627;
+}
+
+.content a:not(.footnote-return):not(.anchor) {
+    box-shadow: 0px -1px 0px #ffffff inset;
+}
+
+.content a:hover {
+    background-color: transparent;
+}
+
+.anchor svg {
+    stroke: #ffffff;
+}
+
+.bg-img {
+    opacity: 0.25;
+}
+
