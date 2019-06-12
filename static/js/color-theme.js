@@ -28,13 +28,15 @@ const getStyleSheet = filename => {
 }
 
 
-const toggleTheme = () => {
+const toggleColorTheme = () => {
+    let sheet = getStyleSheet(lightCSS);
+
     if (window.localStorage.getItem(colorTheme) == darkTheme) {
-        getStyleSheet(lightCSS).disabled = false;
         window.localStorage.setItem(colorTheme, lightTheme);
+        sheet.disabled = false;
     } else {
-        getStyleSheet(lightCSS).disabled = true;
         window.localStorage.setItem(colorTheme, darkTheme);
+        sheet.disabled = true;
     }
 }
 
@@ -45,6 +47,7 @@ if (!window.localStorage.getItem(colorTheme)) {
 
 
 if (window.localStorage.getItem(colorTheme) == darkTheme) {
-    getStyleSheet(lightCSS).disabled = true
+    let sheet = getStyleSheet(lightCSS);
+    sheet.disabled = true
 }
 
