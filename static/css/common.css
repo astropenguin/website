@@ -60,6 +60,13 @@ h1 {
     font-weight: normal;
 }
 
+@media screen and (max-width: 480px) {
+    h1:not(#home-title) {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
 hr {
     width: 100% !important;
     border-bottom-width: 2px !important;
