@@ -70,6 +70,18 @@ blockquote {
     border-left-width: 2px;
 }
 
+a, a:hover {
+    color: currentColor;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border-bottom-style: none !important;
+}
+
+.content a:not(.footnote-return):not(.anchor) {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
 img.emoji {
     height: 1em;
     width: 1em;
