@@ -24,4 +24,7 @@ body * {
 .bg-img {
     opacity: 0.5;
     filter: blur(5px);
+    -webkit-filter: blur(5px);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }
