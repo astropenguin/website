@@ -1,0 +1,30 @@
+/* background color */
+html {
+    background-color: #292a2d;
+}
+
+#site-header {
+    background-color: #252627;
+}
+
+code {
+    background-color: #3b3d42;;
+}
+
+/* foreground color */
+body * {
+    color: #cccccc;
+}
+
+.anchor svg {
+    stroke: #cccccc;
+}
+
+/* background image */
+.bg-img {
+    opacity: 0.5;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}

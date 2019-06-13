@@ -1,18 +1,16 @@
 # ------------------------------
 # hugo
 # ------------------------------
-title = "Astropenguin"
+title = "astropengu.in"
 baseURL = "https://astropengu.in/"
-theme = "hugo-theme-hello-friend"
+theme = "hermit"
+languageCode = "en"
 preserveTaxonomyNames = true
 hasCJKLanguage = true
 enableEmoji = true
 
 # Google Analytics
 googleAnalytics = "UA-130243023-1"
-
-# Disqus
-disqusShortname = "astropenguin"
 
 # use git for lastmod date
 enableGitInfo = true
@@ -29,29 +27,47 @@ hrefTargetBlank = true
 
 
 # ------------------------------
-# hello friend theme
+# hermit theme
 # ------------------------------
 [params]
-contentTypeName = "blog"
-defaultTheme = "light"
-showMenuItems = 3
-showReadingTime = true
+homeSubtitle = "Akio Taniguchi's Website"
+footerCopyright = "Akio Taniguchi"
+gitUrl = "https://github.com/astropenguin/website/commit/"
+bgImg = "img/background.jpg"
 
-[params.logo]
-logoText = "astropenguin"
+# Date format
+dateform        = "Jan 2, 2006"
+dateformShort   = "Jan 2"
+dateformNum     = "2006-01-02"
+dateformNumTime = "2006-01-02 15:04 -0700"
 
-[languages]
-  [languages.en]
-    menuMore = "More"
+# custom css/js
+customCSS = [
+    "css/common.css",
+    "css/dark-theme.css",
+    "css/light-theme.css",
+    "css/prism.css"
+]
+customJS = [
+    "js/twemoji.min.js",
+    "js/prism.min.js",
+    "js/scroll-bar.js",
+    "js/color-theme.js"
+]
 
-[[menu.main]]
-identifier = "github"
-name = "GitHub"
+# Social Icons
+[[params.social]]
+name = "github"
 url = "https://github.com/astropenguin"
-weight = 6
 
-[[menu.main]]
-identifier = "twitter"
-name = "Twitter"
+[[params.social]]
+name = "gitlab"
+url = "https://gitlab.com/astropenguin"
+
+[[params.social]]
+name = "twitter"
 url = "https://twitter.com/astropengu_in"
-weight = 7
+
+[[params.social]]
+name = "email"
+url = "mailto:taniguchi@a.phys.nagoya-u.ac.jp"
