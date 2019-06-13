@@ -42,7 +42,7 @@ const toggleColorTheme = () => {
 
 
 if (!window.localStorage.getItem(colorTheme)) {
-    window.localStorage.setItem(colorTheme, darkTheme);
+    window.localStorage.setItem(colorTheme, lightTheme);
 }
 
 
