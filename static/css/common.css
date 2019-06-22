@@ -32,10 +32,6 @@ code, a {
 }
 
 /* content layout */
-.thin {
-    max-width: 750px;
-}
-
 .content {
     text-align: justify;
     line-height: 1.8rem;
