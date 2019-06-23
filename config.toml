@@ -34,6 +34,7 @@ homeSubtitle = "Akio Taniguchi's Website"
 footerCopyright = "Akio Taniguchi"
 gitUrl = "https://github.com/astropenguin/website/commit/"
 bgImg = "img/background.jpg"
+relatedPosts = true
 
 # Date format
 dateform        = "Jan 2, 2006"
