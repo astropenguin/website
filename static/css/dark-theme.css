@@ -16,6 +16,10 @@ body * {
     color: #cccccc;
 }
 
+code * {
+    color: #cccccc;
+}
+
 .anchor svg {
     stroke: #cccccc;
 }
