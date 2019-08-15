@@ -1,7 +1,7 @@
 # ------------------------------
 # hugo
 # ------------------------------
-title = "astropengu.in"
+title = "astropenguin"
 baseURL = "https://astropengu.in/"
 theme = "hermit"
 languageCode = "en"
