@@ -1,12 +1,12 @@
 // google fonts
 body {
-    font-family: "m plus 1p", sans-serif;
+    font-family: "M PLUS 1p", sans-serif !important;
 }
 
 // twemoji
 img.emoji {
-    height: 1em;
-    width: 1em;
+    height: 1em !important;
+    width: 1em !important;
     display: inline !important;
     margin: 0 .05em 0 .1em !important;
     vertical-align: -0.1em !important;
@@ -30,5 +30,5 @@ blockquote::after {
 
 // bug? fix of pagination
 .pagination {
-    padding-inline-start: 0px;
+    padding-inline-start: 0px !important;
 }
