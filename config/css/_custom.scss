@@ -1,3 +1,18 @@
+// google fonts
+body {
+    font-family: "m plus 1p", sans-serif;
+}
+
+// twemoji
+img.emoji {
+    height: 1em;
+    width: 1em;
+    display: inline !important;
+    margin: 0 .05em 0 .1em !important;
+    vertical-align: -0.1em !important;
+}
+
+// bug? fix of pagination
 .pagination {
     padding-inline-start: 0px;
 }
