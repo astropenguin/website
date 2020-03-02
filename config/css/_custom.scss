@@ -12,6 +12,22 @@ img.emoji {
     vertical-align: -0.1em !important;
 }
 
+// post titles
+.post-title {
+    font-size: 1.5em !important;
+    font-weight: 500 !important;
+}
+
+// block quote
+blockquote {
+    margin: 2em 0 2em 0 !important;
+    padding: 1.2em 1.2em !important;
+}
+
+blockquote::after {
+    content: none !important;
+}
+
 // bug? fix of pagination
 .pagination {
     padding-inline-start: 0px;
