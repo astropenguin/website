@@ -3,8 +3,8 @@ title = "Hugo を使ったウェブサイトの作成: Travis CI の設定"
 date  = 2018-12-18T22:44:00+09:00
 tags  = ["Advent calendar", "Travis CI", "Git", "GitHub", "Hugo"]
 categories  = ["Tech"]
-emoji = true
-draft = true
+toc = true
+aliases = ["/blog/24/"]
 +++
 
 ## TL;DR :christmas_tree:

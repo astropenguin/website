@@ -3,8 +3,8 @@ title = "Hello, world!"
 date  = 2018-12-01T18:08:51+09:00
 tags  = ["Hugo"]
 categories = ["Tech"]
-emoji = true
-draft = false
+toc = true
+aliases = ["/blog/1/"]
 +++
 
 以前のウェブサイト (http://www.ioa.s.u-tokyo.ac.jp/~taniguchi/) の移転先として、

@@ -3,8 +3,8 @@ title = "Matplotlib のデフォルトスタイルの復元方法"
 date  = 2018-12-03T21:47:56+09:00
 tags  = ["Advent calendar", "Python", "matplotlib"]
 categories = ["Tech"]
-emoji = true
-draft = false
+toc = true
+aliases = ["/blog/9/"]
 +++
 
 ## TL;DR :christmas_tree:

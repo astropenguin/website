@@ -3,8 +3,8 @@ title = "VS Code の日本語入力で制御文字が紛れ込む問題"
 date  = 2018-12-01T18:38:39+09:00
 tags  = ["VS Code"]
 categories = ["Tech"]
-emoji = true
-draft = false
+toc = true
+aliases = ["/blog/2/"]
 +++
 
 ## Issue

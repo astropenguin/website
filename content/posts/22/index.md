@@ -3,8 +3,8 @@ title = "Hugo shortcode を使った Instagram 埋め込みテスト"
 date  = 2018-12-16T01:33:19+09:00
 tags  = ["Advent calendar", "Instagram", "Hugo"]
 categories = ["Tech"]
-emoji = true
-draft = false
+toc = true
+aliases = ["/blog/22/"]
 +++
 
 ## TL;DR :christmas_tree:

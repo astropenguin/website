@@ -3,8 +3,8 @@ title = "GitHub で SSH 公開鍵を公開する"
 date  = 2019-02-11T16:14:36+09:00
 tags  = ["Linux", "GitHub", "Security"]
 categories  = ["Tech"]
-emoji = true
-draft = false
+toc = true
+aliases = ["/blog/27/"]
 +++
 
 ## TL;DR :snowman:

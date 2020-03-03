@@ -3,8 +3,8 @@ title = "ADC/MDAS への tmux のインストール"
 date  = 2018-12-06T12:16:40+09:00
 tags  = ["Advent calendar", "Linux", "Linuxbrew", "tmux"]
 categories = ["Tech"]
-emoji = true
-draft = false
+toc = true
+aliases = ["/blog/12/"]
 +++
 
 ## TL;DR :christmas_tree:

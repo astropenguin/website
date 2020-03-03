@@ -3,8 +3,8 @@ title = "Python におけるシングルトンの実装"
 date  = 2018-12-02T00:58:38+09:00
 tags  = ["Advent calendar", "Python"]
 categories = ["Tech"]
-emoji = true
-draft = false
+toc = true
+aliases = ["/blog/8/"]
 +++
 
 ## TL;DR :christmas_tree:

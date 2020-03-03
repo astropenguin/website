@@ -3,8 +3,8 @@ title = "Radio Astro Tools"
 date  = 2018-12-01T22:44:51+09:00
 tags  = ["Python"]
 categories = ["Tech"]
-emoji = true
-draft = false
+toc = true
+aliases = ["/blog/6/"]
 +++
 
 ALMA Phase 2 submission のために

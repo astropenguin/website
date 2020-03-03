@@ -3,6 +3,8 @@ title = "Pandasとセットで理解するxarray：データ構造編"
 date  = 2019-05-01T16:05:17+09:00
 tags  = ["Python", "xarray", "pandas"]
 categories  = ["Tech"]
+toc = true
+aliases = ["/blog/29/"]
 +++
 
 ## TL;DR :flags:

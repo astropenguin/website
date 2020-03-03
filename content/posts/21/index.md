@@ -3,8 +3,8 @@ title = "Python で一時的に関数出力を凍結 (キャッシュ) する"
 date  = 2018-12-15T01:32:30+09:00
 tags  = ["Advent calendar", "Python"]
 categories = ["Tech"]
-emoji = true
-draft = false
+toc = true
+aliases = ["/blog/21/"]
 +++
 
 ## TL;DR :christmas_tree:
