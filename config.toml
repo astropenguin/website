@@ -19,7 +19,7 @@ paginate = 15
 name = "Akio Taniguchi"
 link = "https://astropengu.in"
 
-[Permalinks]
+[permalinks]
 posts = "posts/:filename"
 
 [[menu.main]]
