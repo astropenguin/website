@@ -23,6 +23,12 @@ img.emoji {
     font-size: 0.88rem !important;
 }
 
+// post layout
+.post-content {
+    text-align: justify;
+    line-height: 1.75em;
+}
+
 // block quote
 blockquote {
     margin: 2em 0 2em 0 !important;
@@ -31,6 +37,22 @@ blockquote {
 
 blockquote::after {
     content: none !important;
+}
+
+// hyphenation
+body {
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+code, a {
+    word-break: break-all;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
 }
 
 // bug? fix of pagination
