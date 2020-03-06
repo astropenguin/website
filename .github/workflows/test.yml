@@ -17,5 +17,5 @@ jobs:
           wget ${HUGO_URL}/releases/download/v${HUGO_VERSION}/${SRC}
           sudo apt install ./${SRC}
       - name: Build website
-        run |
+        run: |
           env HUGO_ENV=production hugo --gc --minify
