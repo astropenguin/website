@@ -1,6 +1,7 @@
 // google fonts
 body {
     font-family: "M PLUS 1p", sans-serif !important;
+    line-height: 1.75em !important;
 }
 
 // twemoji
@@ -14,8 +15,9 @@ img.emoji {
 
 // post titles
 .post-title {
-    font-size: 1.5em !important;
+    font-size: 1.5rem !important;
     font-weight: 500 !important;
+    line-height: 1.5em !important;
 }
 
 // post metadata
@@ -26,7 +28,6 @@ img.emoji {
 // post layout
 .post-content {
     text-align: justify;
-    line-height: 1.75em;
 }
 
 // block quote
