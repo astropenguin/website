@@ -6,15 +6,18 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      HUGO_URL: https://github.com/gohugoio/hugo
+      HUGO_URL: https://github.com/gohugoio/hugo/releases/download
       HUGO_TYPE: hugo_extended
       HUGO_VERSION: 0.66.0
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repo and submodule
+        uses: actions/checkout@v2
+        with:
+          submodules: true
       - name: Install hugo
         run: |
           SRC=${HUGO_TYPE}_${HUGO_VERSION}_Linux-64bit.deb
-          wget ${HUGO_URL}/releases/download/v${HUGO_VERSION}/${SRC}
+          wget ${HUGO_URL}/v${HUGO_VERSION}/${SRC}
           sudo apt install ./${SRC}
       - name: Build website
         run: |
