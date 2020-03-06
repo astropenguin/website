@@ -10,7 +10,7 @@ install:
   - sudo dpkg -i hugo_${HUGO_VERSION}_Linux-64bit.deb
 
 script:
-  - hugo
+  - env HUGO_ENV=production hugo --gc --minify
   - touch public/.nojekyll
   - echo astropengu.in > public/CNAME
 
