@@ -1,74 +1,114 @@
 # ------------------------------
-# hugo
+# hugo config
 # ------------------------------
 title = "astropenguin"
 baseURL = "https://astropengu.in/"
-theme = "hermit"
+theme = "loveit"
 languageCode = "en"
-preserveTaxonomyNames = true
+defaultContentLanguage = "en"
+enableGitInfo = true
 hasCJKLanguage = true
 enableEmoji = true
+enableRobotsTXT = true
 
-# Google Analytics
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 googleAnalytics = "UA-130243023-1"
+paginate = 15
 
-# use git for lastmod date
-enableGitInfo = true
-
-[taxonomies]
-tag = "tags"
-category = "categories"
+[author]
+name = "Akio Taniguchi"
+link = "https://astropengu.in"
 
 [permalinks]
-blog = "/:section/:filename/"
+posts = "posts/:filename"
 
-[blackfriday]
-hrefTargetBlank = true
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "about"
+weight = 1
 
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "posts"
+weight = 2
+
+[markup.highlight]
+lineNos = true
+noClasses = false
+
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
+
+[privacy.googleAnalytics]
+anonymizeIP = true
+
+[privacy.youtube]
+privacyEnhanced = true
+
+[mediaTypes."text/plain"]
+suffixes = ["md"]
+
+[outputFormats.MarkDown]
+mediaType = "text/plain"
+isPlainText = true
+isHTML = false
+
+[outputs]
+home = ["HTML", "RSS"]
+page = ["HTML", "MarkDown"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+taxonomyTerm = ["HTML"]
 
 # ------------------------------
-# hermit theme
+# theme config
 # ------------------------------
 [params]
-homeSubtitle = "Akio Taniguchi's Website"
-footerCopyright = "Akio Taniguchi"
-gitUrl = "https://github.com/astropenguin/website/commit/"
-bgImg = "img/background.jpg"
-relatedPosts = true
+version = "0.1.X"
+description = "Akio Taniguchi's personal website"
+subtitle = "Akio Taniguchi's personal website"
+home_mode = "post"
+home_paginate = 5
+socialShare = true
+linkToMarkdown = true
+since = 2018
+dateFormatToUse = "2006-01-02"
+license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
-# Date format
-dateform        = "Jan 2, 2006"
-dateformShort   = "Jan 2"
-dateformNum     = "2006-01-02"
-dateformNumTime = "2006-01-02 15:04 -0700"
+[params.gravatar]
+email = "taniguchi@a.phys.nagoya-u.ac.jp"
 
-# custom css/js
-customCSS = [
-    "css/common.css",
-    "css/dark-theme.css",
-    "css/light-theme.css",
-    "css/prism.css"
-]
-customJS = [
-    "js/twemoji.min.js",
-    "js/prism.min.js",
-    "js/scroll-bar.js",
-    "js/color-theme.js"
-]
+[params.social]
+GitHub = "astropenguin"
+Twitter = "astropengu_in"
+Instagram = "astropengu_in"
+Email = "taniguchi@a.phys.nagoya-u.ac.jp"
+Facebook = "akio.taniguchi.dr"
 
-# Social Icons
-[[params.social]]
-name = "github"
-url = "https://github.com/astropenguin"
+[params.share]
+enable = true
+Twitter = true
+Facebook = true
+Reddit = true
 
-[[params.social]]
-name = "gitlab"
-url = "https://gitlab.com/astropenguin"
+[params.publisher]
+name = "Akio Taniguchi"
 
-[[params.social]]
-name = "twitter"
-url = "https://twitter.com/astropengu_in"
+[params.publisher.logo]
+url = "logo.png"
+width = 127
+height = 40
 
-[[params.social]]
-name = "email"
-url = "mailto:taniguchi@a.phys.nagoya-u.ac.jp"
+[params.logo]
+url = "logo.png"
+width = 127
+height = 40
+
+[params.image]
+url = "cover.png"
+width = 800
+height = 600
