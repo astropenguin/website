@@ -10,12 +10,11 @@ jobs:
       HUGO_TYPE: hugo_extended
       HUGO_VERSION: 0.66.0
     steps:
-      - name: Checkout repo and submodule
+      - name: Checkout website repo
         uses: actions/checkout@v2
+      - name: Initialize theme submodule
         run: |
           git submodule update --init --recursive
-        with:
-          submodules: true
       - name: Install hugo
         run: |
           SRC=${HUGO_TYPE}_${HUGO_VERSION}_Linux-64bit.deb
