@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repo and submodule
         uses: actions/checkout@v2
+        run: |
+          git submodule update --init --recursive
         with:
           submodules: true
       - name: Install hugo
