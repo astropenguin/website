@@ -1,9 +1,9 @@
 # website
 
-[![Test](https://img.shields.io/github/workflow/status/astropenguin/website/Test?logo=github&label=Test&style=flat-square)](https://github.com/astropenguin/website/actions)
-[![GitHub Pages](https://img.shields.io/github/workflow/status/astropenguin/website/GitHub%20Pages?logo=github&label=Deploy&style=flat-square)](https://github.com/astropenguin/website/actions)
+![Test](https://github.com/astropenguin/website/workflows/Test/badge.svg)
+![GitHub Pages](https://github.com/astropenguin/website/workflows/GitHub%20Pages/badge.svg)
 
-:penguin: Personal website powered by Hugo (https://astropengu.in)
+:penguin: Personal website powered by Hugo
 
 ## Run website locally
 
