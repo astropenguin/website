@@ -77,7 +77,7 @@ version = "0.2.X"
 defaultTheme = "auto"
 description = "Akio Taniguchi's personal website"
 gitRepo = "https://github.com/astropenguin/website"
-dateFormat = "Jan 2, 2006"
+dateFormat = "2006-01-02"
 
 [params.analytics]
 enable = true
@@ -113,7 +113,7 @@ subtitle = "Akio Taniguchi's personal website"
 
 [params.list]
 paginate = 15
-dateFormat = "Jan 02"
+dateFormat = "1/02"
 
 [params.page]
 twemoji = true
@@ -138,7 +138,7 @@ type = "lunr"
 
 [params.section]
 paginate = 15
-dateFormat = "Jan 2"
+dateFormat = "1/02"
 
 [params.social]
 GitHub = "astropenguin"
