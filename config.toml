@@ -63,6 +63,11 @@ taxonomyTerm = ["HTML"]
 [permalinks]
 posts = "posts/:filename"
 
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
+
 # ------------------------------
 # theme config
 # ------------------------------
