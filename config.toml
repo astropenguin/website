@@ -81,14 +81,6 @@ enable = true
 id = "UA-130243023-1"
 anonymizeIP = true
 
-[params.cookieconsent]
-enable = false
-
-[params.cookieconsent.content]
-message = "aaa"
-dismiss = "bbb"
-link = ""
-
 [params.footer]
 enable = true
 since = 2018
@@ -100,7 +92,7 @@ desktopMode = "fixed"
 mobileMode = "auto"
 
 [params.header.title]
-logo = "/images/logo.png"
+logo = "/images/avatar.png"
 name = "astropenguin"
 
 [params.home.posts]
@@ -111,7 +103,7 @@ paginate = 5
 enable = true
 typeit = true
 social = true
-gravatarEmail = "taniguchi@a.phys.nagoya-u.ac.jp"
+avatarURL = "/images/avatar.png"
 subtitle = "Akio Taniguchi's personal website"
 
 [params.list]
