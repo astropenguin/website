@@ -5,7 +5,7 @@ tags = ["Python", "NumPy", "pandas", "xarray"]
 categories = ["Tech"]
 +++
 
-## TL;DR
+## TL;DR :sunflower:
 
 [xarray]は多次元配列にメタデータ（軸のラベルなど）がくっついたデータを扱うためのツールとして、[NumPy]や[pandas]と同様にデータ解析で使われるPythonパッケージですが、様々なデータをxarray（のDataArray）で扱っていく中で以下のように感じることが増えてきました。
 
