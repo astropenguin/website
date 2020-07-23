@@ -1,5 +1,5 @@
 +++
-title = "Pythonのデータクラスのようにxarrayのデータ定義ができる拡張機能"
+title = "Pythonのデータクラスのようにxarrayのデータ構造を定義する"
 date = 2020-07-24T01:46:17+09:00
 tags = ["Python", "NumPy", "pandas", "xarray"]
 categories = ["Tech"]
