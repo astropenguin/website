@@ -9,3 +9,25 @@ header {
 .header-title {
   font-weight: normal;
 }
+
+.single {
+  .content {
+    p {
+      margin: 1.0rem 0 !important;
+    }
+
+    ul,
+    ol {
+      margin: 0.0rem 0 !important;
+    }
+
+    > ul,
+    > ol {
+      margin: 1.0rem 0 !important;
+    }
+  }
+}
+
+.highlight {
+  margin: 1.0rem 0 !important;
+}
