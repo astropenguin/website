@@ -1,53 +1,49 @@
 # ------------------------------
 # hugo config
 # ------------------------------
+
 title = "astropenguin"
 baseURL = "https://astropengu.in/"
+defaultContentLanguage = "ja"
 theme = "loveit"
-languageCode = "en"
-defaultContentLanguage = "en"
-enableGitInfo = true
-hasCJKLanguage = true
-enableEmoji = true
 enableRobotsTXT = true
-
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-googleAnalytics = "UA-130243023-1"
-paginate = 15
+enableGitInfo = true
+enableEmoji = true
 
 [author]
 name = "Akio Taniguchi"
+email = "taniguchi@a.phys.nagoya-u.ac.jp"
 link = "https://astropengu.in"
 
-[permalinks]
-posts = "posts/:filename"
+[languages.ja]
+weight = 1
+languageCode = "ja"
+languageName = "Ja"
+hasCJKLanguage = true
+
+[languages.en]
+weight = 2
+languageCode = "en"
+languageName = "En"
+hasCJKLanguage = false
 
 [[menu.main]]
-identifier = "about"
 name = "About"
+title = "About me and this website"
+identifier = "about"
 url = "about"
 weight = 1
 
 [[menu.main]]
-identifier = "posts"
 name = "Posts"
+title = "Blog posts"
+identifier = "posts"
 url = "posts"
 weight = 2
 
 [markup.highlight]
 lineNos = true
 noClasses = false
-
-[sitemap]
-changefreq = "weekly"
-filename = "sitemap.xml"
-priority = 0.5
-
-[privacy.googleAnalytics]
-anonymizeIP = true
-
-[privacy.youtube]
-privacyEnhanced = true
 
 [mediaTypes."text/plain"]
 suffixes = ["md"]
@@ -58,57 +54,87 @@ isPlainText = true
 isHTML = false
 
 [outputs]
-home = ["HTML", "RSS"]
+home = ["HTML", "RSS", "JSON"]
 page = ["HTML", "MarkDown"]
 section = ["HTML", "RSS"]
 taxonomy = ["HTML", "RSS"]
 taxonomyTerm = ["HTML"]
 
+[permalinks]
+posts = "posts/:filename"
+
 # ------------------------------
 # theme config
 # ------------------------------
-[params]
-version = "0.1.X"
-description = "Akio Taniguchi's personal website"
-subtitle = "Akio Taniguchi's personal website"
-home_mode = "post"
-home_paginate = 5
-socialShare = true
-linkToMarkdown = true
-since = 2018
-dateFormatToUse = "2006-01-02"
-license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
-[params.gravatar]
-email = "taniguchi@a.phys.nagoya-u.ac.jp"
+[params]
+version = "0.2.X"
+defaultTheme = "auto"
+description = "Akio Taniguchi's personal website"
+gitRepo = "https://github.com/astropenguin/website"
+dateFormat = "2006-01-02"
+
+[params.analytics]
+enable = true
+
+[params.analytics.google]
+id = "UA-130243023-1"
+anonymizeIP = true
+
+[params.footer]
+enable = true
+since = 2018
+author = true
+hugo = false
+
+[params.header]
+desktopMode = "fixed"
+mobileMode = "auto"
+
+[params.header.title]
+logo = "/images/avatar.png"
+name = "astropenguin"
+
+[params.home.posts]
+enable = true
+paginate = 5
+
+[params.home.profile]
+enable = true
+typeit = true
+social = true
+avatarURL = "/images/avatar.png"
+subtitle = "Akio Taniguchi's personal website"
+
+[params.list]
+paginate = 15
+dateFormat = "Jan 02"
+
+[params.page]
+twemoji = true
+
+[params.page.comment]
+enable = false
+
+[params.page.share]
+enable = true
+Twitter = true
+Facebook = true
+Pocket = true
+Evernote = true
+
+[params.search]
+enable = true
+type = "lunr"
+
+[params.section]
+paginate = 15
+dateFormat = "Jan 02"
 
 [params.social]
 GitHub = "astropenguin"
 Twitter = "astropengu_in"
 Instagram = "astropengu_in"
-Email = "taniguchi@a.phys.nagoya-u.ac.jp"
 Facebook = "akio.taniguchi.dr"
-
-[params.share]
-enable = true
-Twitter = true
-Facebook = true
-Reddit = true
-
-[params.publisher]
-name = "Akio Taniguchi"
-
-[params.publisher.logo]
-url = "logo.png"
-width = 127
-height = 40
-
-[params.logo]
-url = "logo.png"
-width = 127
-height = 40
-
-[params.image]
-url = "cover.png"
-width = 800
-height = 600
+Email = "taniguchi@a.phys.nagoya-u.ac.jp"
+RSS = true
