@@ -97,7 +97,7 @@ desktopMode = "auto"
 mobileMode = "auto"
 
 [params.header.title]
-logo = "/images/avatar.png"
+logo = "/images/avatar-round.png"
 name = "astropenguin"
 
 [params.home.posts]
@@ -108,7 +108,7 @@ paginate = 5
 enable = true
 typeit = true
 social = true
-avatarURL = "/images/avatar.png"
+avatarURL = "/images/avatar-square.png"
 subtitle = "Akio Taniguchi's personal website"
 
 [params.list]
