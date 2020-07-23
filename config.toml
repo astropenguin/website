@@ -117,6 +117,10 @@ dateFormat = "Jan 02"
 
 [params.page]
 twemoji = true
+linkToMarkdown = true
+
+[params.page.code]
+maxShownLines = 20
 
 [params.page.comment]
 enable = false
