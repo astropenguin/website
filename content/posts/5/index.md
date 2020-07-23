@@ -3,7 +3,6 @@ title = "シンボリックリンクのパス指定"
 date  = 2018-12-01T18:41:48+09:00
 tags  = ["Linux"]
 categories = ["Tech"]
-toc = true
 aliases = ["/blog/5/"]
 +++
 

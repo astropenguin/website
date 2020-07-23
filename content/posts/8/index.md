@@ -3,7 +3,6 @@ title = "Python におけるシングルトンの実装"
 date  = 2018-12-02T00:58:38+09:00
 tags  = ["Advent calendar", "Python"]
 categories = ["Tech"]
-toc = true
 aliases = ["/blog/8/"]
 +++
 

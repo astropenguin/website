@@ -3,7 +3,6 @@ title = "IPython/Jupyter の設定も pipenv で管理する"
 date  = 2018-12-14T12:28:08+09:00
 tags  = ["Advent calendar", "Python", "IPython", "Jupyter", "pipenv"]
 categories = ["Tech"]
-toc = true
 aliases = ["/blog/20/"]
 +++
 

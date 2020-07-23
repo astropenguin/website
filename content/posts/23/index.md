@@ -3,7 +3,6 @@ title = "Python の setup.py の内容を setup.cfg で管理する"
 date  = 2018-12-17T20:43:36+09:00
 tags  = ["Advent calendar", "Python", "pip", "setuptools"]
 categories  = ["Tech"]
-toc = true
 aliases = ["/blog/23/"]
 +++
 

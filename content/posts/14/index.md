@@ -3,7 +3,6 @@ title = "Hugo を使ったウェブサイトの作成: 技術選定"
 date  = 2018-12-08T22:52:48+09:00
 tags  = ["Advent calendar", "Hugo", "Travis CI", "Git", "GitHub"]
 categories = ["Tech"]
-toc = true
 aliases = ["/blog/14/"]
 +++
 

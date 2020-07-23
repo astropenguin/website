@@ -3,7 +3,6 @@ title = "Hugo を使ったウェブサイトの作成: ウェブサイトの設�
 date  = 2018-12-10T22:50:44+09:00
 tags  = ["Advent calendar", "Hugo", "Git", "GitHub"]
 categories = ["Tech"]
-toc = true
 aliases = ["/blog/16/"]
 +++
 
