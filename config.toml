@@ -20,12 +20,14 @@ weight = 1
 languageCode = "ja"
 languageName = "Ja"
 hasCJKLanguage = true
+summaryLength = 100
 
 [languages.en]
 weight = 2
 languageCode = "en"
 languageName = "En"
 hasCJKLanguage = false
+summaryLength = 80
 
 [[menu.main]]
 name = "About"
