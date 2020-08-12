@@ -1,17 +1,17 @@
 name: Test
 
-on:
-  push
+on: push
 
 jobs:
   job:
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
-          submodules: true
           fetch-depth: 0
-      - name: Setup hugo
+          submodules: true
+      - name: Install dependencies
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.74.2'
