@@ -9,6 +9,7 @@ theme = "stack"
 enableRobotsTXT = true
 enableGitInfo = true
 enableEmoji = true
+paginate = 8
 
 [author]
 name = "Akio Taniguchi"
@@ -29,47 +30,85 @@ languageName = "En"
 hasCJKLanguage = false
 summaryLength = 80
 
+[markup.highlight]
+style = "dracula"
+
 [[menu.main]]
-name = "About"
-title = "About me and this website"
-identifier = "about"
-url = "about"
+identifier = "home"
+name = "Home"
+url = "/"
+pre = "home"
 weight = 1
 
 [[menu.main]]
-name = "Posts"
-title = "Blog posts"
-identifier = "posts"
-url = "posts"
+identifier = "about"
+name = "About"
+url = "about"
+pre = "user"
 weight = 2
 
-[markup.highlight]
-lineNos = true
-noClasses = false
+[[menu.main]]
+identifier = "archives"
+name = "Archives"
+url = "archives"
+pre = "archives"
+weight = 3
 
-[mediaTypes."text/plain"]
-suffixes = ["md"]
-
-[outputFormats.MarkDown]
-mediaType = "text/plain"
-isPlainText = true
-isHTML = false
-
-[outputs]
-home = ["HTML", "RSS", "JSON"]
-page = ["HTML", "MarkDown"]
-section = ["HTML", "RSS"]
-taxonomy = ["HTML", "RSS"]
-taxonomyTerm = ["HTML"]
+[[menu.main]]
+identifier = "search"
+name = "Search"
+url = "search"
+pre = "search"
+weight = 4
 
 [permalinks]
-posts = "posts/:filename"
-
-[sitemap]
-changefreq = "weekly"
-filename = "sitemap.xml"
-priority = 0.5
+posts = "/posts/:filename"
+page = "/:filename"
 
 # ------------------------------
 # theme config
 # ------------------------------
+
+[params]
+mainSections = ["posts"]
+
+[params.article.license]
+enabled = true
+default = "Licensed under CC BY 4.0"
+
+[params.colorScheme]
+toggle = true
+default = "auto"
+
+[params.comments]
+enabled = false
+
+[params.dateFormat]
+published = "2006-01-02"
+lastUpdated = "2006-01-02 15:04 MST"
+
+[params.defaultImage.opengraph]
+enabled = false
+
+[params.footer]
+since = 2018
+
+[params.opengraph.twitter]
+site = "astropengu_in"
+card = "summary_large_image"
+
+[params.sidebar]
+subtitle = "Akio Taniguchi's website"
+
+[params.sidebar.avatar]
+src = "https://www.gravatar.com/avatar/631d6d325e5913f5e9ea9a500c761b0b?s=150"
+
+[params.widgets]
+enabled = ["search", "archives", "tag-cloud"]
+
+[params.widgets.archives]
+limit = 10
+path = "archives"
+
+[params.widgets.tagCloud]
+limit = 30
