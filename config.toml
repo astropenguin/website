@@ -5,7 +5,7 @@
 title = "astropenguin"
 baseURL = "https://astropengu.in/"
 defaultContentLanguage = "ja"
-theme = "loveit"
+theme = "stack"
 enableRobotsTXT = true
 enableGitInfo = true
 enableEmoji = true
@@ -73,79 +73,3 @@ priority = 0.5
 # ------------------------------
 # theme config
 # ------------------------------
-
-[params]
-version = "0.2.X"
-defaultTheme = "auto"
-description = "Akio Taniguchi's personal website"
-gitRepo = "https://github.com/astropenguin/website"
-dateFormat = "2006-01-02"
-
-[params.analytics]
-enable = true
-
-[params.analytics.google]
-id = "UA-130243023-1"
-anonymizeIP = true
-
-[params.footer]
-enable = true
-since = 2018
-author = true
-hugo = false
-
-[params.header]
-desktopMode = "auto"
-mobileMode = "auto"
-
-[params.header.title]
-logo = "/images/avatar-round.png"
-name = "astropenguin"
-
-[params.home.posts]
-enable = true
-paginate = 5
-
-[params.home.profile]
-enable = true
-typeit = true
-social = true
-avatarURL = "/images/avatar-square.png"
-subtitle = "Akio Taniguchi's personal website"
-
-[params.list]
-paginate = 15
-dateFormat = "1/02"
-
-[params.page]
-twemoji = true
-linkToMarkdown = true
-
-[params.page.code]
-maxShownLines = 20
-
-[params.page.comment]
-enable = false
-
-[params.page.share]
-enable = true
-Twitter = true
-Facebook = true
-Pocket = true
-Evernote = true
-
-[params.search]
-enable = true
-type = "lunr"
-
-[params.section]
-paginate = 15
-dateFormat = "1/02"
-
-[params.social]
-GitHub = "astropenguin"
-Twitter = "astropengu_in"
-Instagram = "astropengu_in"
-Facebook = "akio.taniguchi.dr"
-Email = "taniguchi@a.phys.nagoya-u.ac.jp"
-RSS = true
