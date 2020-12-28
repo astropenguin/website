@@ -9,7 +9,7 @@ theme = "stack"
 enableRobotsTXT = true
 enableGitInfo = true
 enableEmoji = true
-paginate = 8
+paginate = 5
 
 [author]
 name = "Akio Taniguchi"
