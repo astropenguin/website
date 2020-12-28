@@ -9,7 +9,7 @@
 
 ### Requirements
 
-Hugo v0.62.0 or later is required.
+Hugo v0.78.0 or later is required.
 
 ```shell
 $ brew install hugo
