@@ -62,7 +62,7 @@ pre = "search"
 weight = 4
 
 [permalinks]
-posts = "/posts/:filename"
+post = "/posts/:filename"
 page = "/:filename"
 
 # ------------------------------
@@ -70,7 +70,7 @@ page = "/:filename"
 # ------------------------------
 
 [params]
-mainSections = ["posts"]
+mainSections = ["post"]
 
 [params.article.license]
 enabled = true
