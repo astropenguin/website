@@ -20,8 +20,6 @@ Hugo は `{{/* params */}}` のフォーマットで、[各種ショートコー
 {{</* instagram BrfsVjEhud0 hidecaption */>}}
 ```
 
-{{< instagram BrfsVjEhud0 hidecaption >}}
-
 `<script>` タグを使って埋め込むよりも簡単かつ読みやすい Markdown になるので便利ですね。
 ちなみに、ショートコードを**コードとして表示する**際は、 `{{</*/* params */*/>}}` と書かないと `<pre>` タグの中でも Hugo によって変換されてしまうため注意が必要です。
 
