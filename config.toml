@@ -5,15 +5,19 @@
 title = "astropenguin"
 baseURL = "https://astropengu.in/"
 defaultContentLanguage = "ja"
-theme = "loveit"
+theme = "stack"
 enableRobotsTXT = true
 enableGitInfo = true
 enableEmoji = true
+paginate = 5
 
 [author]
 name = "Akio Taniguchi"
 email = "taniguchi@a.phys.nagoya-u.ac.jp"
 link = "https://astropengu.in"
+
+[build]
+noJSConfigInAssets = true
 
 [languages.ja]
 weight = 1
@@ -29,123 +33,92 @@ languageName = "En"
 hasCJKLanguage = false
 summaryLength = 80
 
+[markup.highlight]
+style = "dracula"
+
 [[menu.main]]
-name = "About"
-title = "About me and this website"
-identifier = "about"
-url = "about"
+identifier = "home"
+name = "Home"
+url = "/"
+pre = "home"
 weight = 1
 
 [[menu.main]]
-name = "Posts"
-title = "Blog posts"
-identifier = "posts"
-url = "posts"
+identifier = "about"
+name = "About"
+url = "about"
+pre = "user"
 weight = 2
 
-[markup.highlight]
-lineNos = true
-noClasses = false
+[[menu.main]]
+identifier = "archives"
+name = "Archives"
+url = "archives"
+pre = "archives"
+weight = 3
 
-[mediaTypes."text/plain"]
-suffixes = ["md"]
+[[menu.main]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/astropenguin/"
+pre = "github"
+weight = 4
 
-[outputFormats.MarkDown]
-mediaType = "text/plain"
-isPlainText = true
-isHTML = false
-
-[outputs]
-home = ["HTML", "RSS", "JSON"]
-page = ["HTML", "MarkDown"]
-section = ["HTML", "RSS"]
-taxonomy = ["HTML", "RSS"]
-taxonomyTerm = ["HTML"]
+[[menu.main]]
+identifier = "search"
+name = "Search"
+url = "search"
+pre = "search"
+weight = 5
 
 [permalinks]
-posts = "posts/:filename"
-
-[sitemap]
-changefreq = "weekly"
-filename = "sitemap.xml"
-priority = 0.5
+post = "/posts/:filename"
+page = "/:filename"
 
 # ------------------------------
 # theme config
 # ------------------------------
 
 [params]
-version = "0.2.X"
-defaultTheme = "auto"
-description = "Akio Taniguchi's personal website"
-gitRepo = "https://github.com/astropenguin/website"
-dateFormat = "2006-01-02"
+mainSections = ["post"]
 
-[params.analytics]
-enable = true
+[params.article.license]
+enabled = true
+default = "Licensed under CC BY 4.0"
 
-[params.analytics.google]
-id = "UA-130243023-1"
-anonymizeIP = true
+[params.colorScheme]
+toggle = true
+default = "auto"
+
+[params.comments]
+enabled = false
+
+[params.dateFormat]
+published = "2006-01-02"
+lastUpdated = "2006-01-02 15:04 MST"
+
+[params.defaultImage.opengraph]
+enabled = false
 
 [params.footer]
-enable = true
 since = 2018
-author = true
-hugo = false
 
-[params.header]
-desktopMode = "auto"
-mobileMode = "auto"
+[params.opengraph.twitter]
+site = "astropengu_in"
+card = "summary_large_image"
 
-[params.header.title]
-logo = "/images/avatar-round.png"
-name = "astropenguin"
+[params.sidebar]
+subtitle = "Akio Taniguchi's website"
 
-[params.home.posts]
-enable = true
-paginate = 5
+[params.sidebar.avatar]
+src = "https://www.gravatar.com/avatar/631d6d325e5913f5e9ea9a500c761b0b?s=150"
 
-[params.home.profile]
-enable = true
-typeit = true
-social = true
-avatarURL = "/images/avatar-square.png"
-subtitle = "Akio Taniguchi's personal website"
+[params.widgets]
+enabled = ["search", "archives", "tag-cloud"]
 
-[params.list]
-paginate = 15
-dateFormat = "1/02"
+[params.widgets.archives]
+limit = 10
+path = "archives"
 
-[params.page]
-twemoji = true
-linkToMarkdown = true
-
-[params.page.code]
-maxShownLines = 20
-
-[params.page.comment]
-enable = false
-
-[params.page.share]
-enable = true
-Twitter = true
-Facebook = true
-Pocket = true
-Evernote = true
-
-[params.search]
-enable = true
-type = "lunr"
-
-[params.section]
-paginate = 15
-dateFormat = "1/02"
-
-[params.social]
-GitHub = "astropenguin"
-Twitter = "astropengu_in"
-Instagram = "astropengu_in"
-Facebook = "akio.taniguchi.dr"
-Email = "taniguchi@a.phys.nagoya-u.ac.jp"
-RSS = true
+[params.widgets.tagCloud]
+limit = 30

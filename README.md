@@ -5,15 +5,15 @@
 
 :penguin: Personal website powered by Hugo ([astropengu.in](https://astropengu.in))
 
-## Development
+## Requirements
 
-### Requirements
-
-Hugo v0.62.0 or later is required.
+Hugo extended v0.78.0 or later is required.
 
 ```shell
 $ brew install hugo
 ```
+
+## Development
 
 ### Download source codes
 
@@ -21,7 +21,7 @@ $ brew install hugo
 $ git clone --recursive https://github.com/astropenguin/website.git /path/to/website
 ```
 
-### Run website
+### Run website locally
 
 ```shell
 $ cd /path/to/website
