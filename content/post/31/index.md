@@ -3,6 +3,7 @@ title = "Pythonのデータクラスのようにxarrayのデータ構造を定�
 date = 2020-07-24T01:46:17+09:00
 tags = ["Python", "NumPy", "pandas", "xarray"]
 categories = ["Tech"]
+image = "image.jpg"
 +++
 
 ## TL;DR :sunflower:
