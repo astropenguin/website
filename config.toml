@@ -16,6 +16,9 @@ name = "Akio Taniguchi"
 email = "taniguchi@a.phys.nagoya-u.ac.jp"
 link = "https://astropengu.in"
 
+[build]
+noJSConfigInAssets = true
+
 [languages.ja]
 weight = 1
 languageCode = "ja"
