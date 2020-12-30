@@ -115,7 +115,7 @@ from inflection import underscore
 
 
 def snake_case(name, bases, dict):
-    new_dict =  {underscore(k): v for k, v in dict.items()}
+    new_dict = {underscore(k): v for k, v in dict.items()}
     return type(name, bases, new_dict)
 
 
