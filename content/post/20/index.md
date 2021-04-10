@@ -1,7 +1,7 @@
 +++
 title = "IPython/Jupyter の設定も pipenv で管理する"
-date  = 2018-12-14T12:28:08+09:00
-tags  = ["Python", "IPython", "Jupyter", "pipenv"]
+date = 2018-12-14T12:28:08+09:00
+tags = ["Python", "IPython", "Jupyter", "pipenv"]
 categories = ["Tech"]
 aliases = ["/blog/20/"]
 +++

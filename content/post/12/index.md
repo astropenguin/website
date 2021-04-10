@@ -1,7 +1,7 @@
 +++
 title = "ADC/MDAS への tmux のインストール"
-date  = 2018-12-06T12:16:40+09:00
-tags  = ["Linux", "Linuxbrew", "tmux"]
+date = 2018-12-06T12:16:40+09:00
+tags = ["Linux", "Linuxbrew", "tmux"]
 categories = ["Tech"]
 aliases = ["/blog/12/"]
 +++

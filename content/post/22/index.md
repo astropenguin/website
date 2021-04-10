@@ -1,7 +1,7 @@
 +++
 title = "Hugo shortcode を使った Instagram 埋め込みテスト"
-date  = 2018-12-16T01:33:19+09:00
-tags  = ["Instagram", "Hugo"]
+date = 2018-12-16T01:33:19+09:00
+tags = ["Instagram", "Hugo"]
 categories = ["Tech"]
 aliases = ["/blog/22/"]
 +++

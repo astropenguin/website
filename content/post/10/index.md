@@ -1,7 +1,7 @@
 +++
 title = "Python のコンテキストマネージャを使った複数行の時間計測"
-date  = 2018-12-04T21:35:49+09:00
-tags  = ["Python", "IPython"]
+date = 2018-12-04T21:35:49+09:00
+tags = ["Python", "IPython"]
 categories = ["Tech"]
 aliases = ["/blog/10/"]
 +++

@@ -1,8 +1,8 @@
 +++
 title = "Matplotlib で図の余白のみを透明にする"
-date  = 2019-02-11T16:00:09+09:00
-tags  = ["Python", "matplotlib", "Visualization"]
-categories  = ["Tech"]
+date = 2019-02-11T16:00:09+09:00
+tags = ["Python", "matplotlib", "Visualization"]
+categories = ["Tech"]
 aliases = ["/blog/26/"]
 +++
 

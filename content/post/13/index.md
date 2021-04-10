@@ -1,7 +1,7 @@
 +++
 title = "Slack のカスタムテーマの設定"
-date  = 2018-12-07T09:51:31+09:00
-tags  = ["Slack"]
+date = 2018-12-07T09:51:31+09:00
+tags = ["Slack"]
 categories = ["Tech"]
 aliases = ["/blog/13/"]
 +++

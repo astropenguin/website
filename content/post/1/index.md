@@ -1,7 +1,7 @@
 +++
 title = "Hello, world!"
-date  = 2018-12-01T18:08:51+09:00
-tags  = ["Hugo"]
+date = 2018-12-01T18:08:51+09:00
+tags = ["Hugo"]
 categories = ["Tech"]
 aliases = ["/blog/1/"]
 +++

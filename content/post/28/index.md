@@ -1,8 +1,8 @@
 +++
 title = "Hugo theme を変更しました"
-date  = 2019-04-15T11:00:49+09:00
-tags  = ["Hugo", "Website"]
-categories  = ["Tech"]
+date = 2019-04-15T11:00:49+09:00
+tags = ["Hugo", "Website"]
+categories = ["Tech"]
 aliases = ["/blog/28/"]
 +++
 

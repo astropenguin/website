@@ -1,7 +1,7 @@
 +++
 title = "RADEX の自動インストーラを作成する"
-date  = 2018-12-13T02:13:09+09:00
-tags  = ["RADEX", "Homebrew", "GNU make"]
+date = 2018-12-13T02:13:09+09:00
+tags = ["RADEX", "Homebrew", "GNU make"]
 categories = ["Tech"]
 aliases = ["/blog/19/"]
 +++
