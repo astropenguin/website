@@ -51,18 +51,11 @@ pre = "user"
 weight = 2
 
 [[menu.main]]
-identifier = "archives"
-name = "Archives"
-url = "archives"
-pre = "archives"
-weight = 3
-
-[[menu.main]]
 identifier = "search"
 name = "Search"
 url = "search"
 pre = "search"
-weight = 4
+weight = 3
 
 [[menu.main]]
 identifier = "github"
