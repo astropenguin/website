@@ -1,8 +1,8 @@
 +++
 title = "Hugo を使ったウェブサイトの作成: Travis CI の設定"
-date  = 2018-12-18T22:44:00+09:00
-tags  = ["Travis CI", "Git", "GitHub", "Hugo"]
-categories  = ["Tech"]
+date = 2018-12-18T22:44:00+09:00
+tags = ["Travis CI", "Git", "GitHub", "Hugo"]
+categories = ["Tech"]
 aliases = ["/blog/24/"]
 +++
 

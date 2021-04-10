@@ -1,7 +1,7 @@
 +++
 title = "Radio Astro Tools"
-date  = 2018-12-01T22:44:51+09:00
-tags  = ["Python"]
+date = 2018-12-01T22:44:51+09:00
+tags = ["Python"]
 categories = ["Tech"]
 aliases = ["/blog/6/"]
 +++

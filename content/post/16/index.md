@@ -1,7 +1,7 @@
 +++
 title = "Hugo を使ったウェブサイトの作成: ウェブサイトの設定"
-date  = 2018-12-10T22:50:44+09:00
-tags  = ["Hugo", "Git", "GitHub"]
+date = 2018-12-10T22:50:44+09:00
+tags = ["Hugo", "Git", "GitHub"]
 categories = ["Tech"]
 aliases = ["/blog/16/"]
 +++

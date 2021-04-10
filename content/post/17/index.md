@@ -1,7 +1,7 @@
 +++
 title = "プログラミング用フォント Ricty のインストール"
-date  = 2018-12-11T23:06:55+09:00
-tags  = ["Ricty", "Homebrew"]
+date = 2018-12-11T23:06:55+09:00
+tags = ["Ricty", "Homebrew"]
 categories = ["Tech"]
 aliases = ["/blog/17/"]
 +++

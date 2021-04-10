@@ -1,7 +1,7 @@
 +++
 title = "ADC/MDAS への Linuxbrew のインストール"
-date  = 2018-12-05T18:18:49+09:00
-tags  = ["Linux", "Linuxbrew"]
+date = 2018-12-05T18:18:49+09:00
+tags = ["Linux", "Linuxbrew"]
 categories = ["Tech"]
 aliases = ["/blog/11/"]
 +++

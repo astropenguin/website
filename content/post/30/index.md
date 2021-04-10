@@ -1,8 +1,8 @@
 +++
 title = "Python dictionary の KeyError に keys 一覧を表示させる"
-date  = 2019-05-20T00:21:21+09:00
-tags  = ["Python"]
-categories  = ["Tech"]
+date = 2019-05-20T00:21:21+09:00
+tags = ["Python"]
+categories = ["Tech"]
 aliases = ["/blog/30/"]
 image = "image.jpg"
 +++
