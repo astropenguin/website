@@ -1,0 +1,148 @@
+<!doctype html><html lang=ja><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="__new__・__init__・typeの役割を正しく理解するためのメモ"><title>Pythonのクラスとメタクラスまとめ</title><link rel=canonical href=https://astropengu.in/posts/32/><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Pythonのクラスとメタクラスまとめ"><meta property="og:description" content="__new__・__init__・typeの役割を正しく理解するためのメモ"><meta property="og:url" content="https://astropengu.in/posts/32/"><meta property="og:site_name" content="astropenguin"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Python"><meta property="article:published_time" content="2020-12-29T17:48:00+09:00"><meta property="article:modified_time" content="2020-12-30T10:46:01+09:00"><meta property="og:image" content="https://astropengu.in/posts/32/image.jpg"><meta name=twitter:site content="astropengu_in"><meta name=twitter:title content="Pythonのクラスとメタクラスまとめ"><meta name=twitter:description content="__new__・__init__・typeの役割を正しく理解するためのメモ"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://astropengu.in/posts/32/image.jpg"><link rel=preconnect href=https://fonts.gstatic.com><link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel=stylesheet><script src=https://twemoji.maxcdn.com/v/latest/twemoji.min.js crossorigin=anonymous></script></head><body><script>(function(){const colorSchemeKey='StackColorScheme';if(!localStorage.getItem(colorSchemeKey)){localStorage.setItem(colorSchemeKey,"auto");}})();</script><script>(function(){const colorSchemeKey='StackColorScheme';const colorSchemeItem=localStorage.getItem(colorSchemeKey);const supportDarkMode=window.matchMedia('(prefers-color-scheme: dark)').matches===true;if(colorSchemeItem=='dark'||colorSchemeItem==='auto'&&supportDarkMode){document.body.dataset.scheme='dark';}else{document.body.dataset.scheme='light';}})();</script><div class="container main-container flex on-phone--column extended article-page with-toolbar"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header class=site-info><figure class=site-avatar><img src="https://www.gravatar.com/avatar/631d6d325e5913f5e9ea9a500c761b0b?s=150" width=300 height=300 class=site-logo loading=lazy alt=Avatar></figure><h1 class=site-name><a href=https://astropengu.in/>astropenguin</a></h1><h2 class=site-description>Akio Taniguchi's website</h2></header><ol class=menu id=main-menu><li><a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>Home</span></a></li><li><a href=/about><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=/search><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><li><a href=https://github.com/astropenguin/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0c-2.4-1.6-3.5-1.3-3.5-1.3a4.2 4.2.0 00-.1 3.2 4.6 4.6.0 00-1.3 3.2c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span>GitHub</span></a></li><li><a href=https://twitter.com/astropengu_in/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753c-.002-.249 1.51-2.772 1.818-4.013z"/></svg><span>Twitter</span></a></li><li><a href="https://scholar.google.com/citations?user=O4aEvvcAAAAJ"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 9 12 5 2 9l10 4 10-4v6"/><path d="M6 10.6V16a6 3 0 0012 0v-5.4"/></svg><span>Papers</span></a></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>Dark Mode</span></li></ol></aside><main class="main full-width"><div id=article-toolbar><a href=https://astropengu.in/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span>Back</span></a></div><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/posts/32/><img src=/posts/32/image_hud757c1cb85c28ff6302647a0a6aa5a74_1830888_800x0_resize_q75_box.jpg srcset="/posts/32/image_hud757c1cb85c28ff6302647a0a6aa5a74_1830888_800x0_resize_q75_box.jpg 800w, /posts/32/image_hud757c1cb85c28ff6302647a0a6aa5a74_1830888_1600x0_resize_q75_box.jpg 1600w" width=800 height=1201 loading=lazy alt="Featured image of post Pythonのクラスとメタクラスまとめ"></a></div><div class=article-details><header class=article-category><a href=/categories/tech/ style=background-color:#00a3af;color:#fff>Tech</a></header><h2 class=article-title><a href=/posts/32/>Pythonのクラスとメタクラスまとめ</a></h2><h3 class=article-subtitle>__new__・__init__・typeの役割を正しく理解するためのメモ</h3><footer class=article-time><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--published>2020-12-29</time></footer></div></header><section class=article-content><h2 id=tldr->TL;DR 🎍</h2><p>Pythonのクラス・メタクラス関連は毎回こんがらかるのでメモ。<code>__new__</code>・<code>__init__</code>・<code>type</code>の役割を正しく理解するのが重要。
+まず、以下では通常のクラス定義として以下を考えることにする。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># 通常のクラス定義</span>
+
+<span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Class</span>:
+    <span style=color:#ff79c6>def</span> __init__(self, arg):
+        self<span style=color:#ff79c6>.</span>arg <span style=color:#ff79c6>=</span> arg
+</code></pre></div><h2 id=__new__はインスタンスを生成__init__はインスタンスを初期化>__new__はインスタンスを生成・__init__はインスタンスを初期化</h2><p><code>__new__</code>は初期化されていないクラスのインスタンスを生成するのに使われる。<code>__init__</code>はインスタンスが生成された後に初期化のため呼び出される。
+<code>__init__</code>によってインスタンスが生成されている訳ではないことに注意する（Pythonで<code>__init__</code>をコンストラクタと呼ばないのはそのためである）。
+つまり、以下の2つは等価である。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># 通常のインスタンス生成</span>
+
+obj <span style=color:#ff79c6>=</span> Class(arg)
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># __new__と__init__を明示的に呼び出したインスタンス生成</span>
+
+obj <span style=color:#ff79c6>=</span> Class<span style=color:#ff79c6>.</span>__new__(Class, arg)
+obj<span style=color:#ff79c6>.</span>__init__(arg)
+</code></pre></div><p><code>__new__</code>は一般的には定義されていないので、その場合は基底クラス<code>object</code>の<code>__new__</code>が呼び出されることになる。
+つまり、以下とも等価である。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># __new__が定義されていない場合のインスタンス生成</span>
+
+obj <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>object</span><span style=color:#ff79c6>.</span>__new__(Class, arg)
+obj<span style=color:#ff79c6>.</span>__init__(arg)
+</code></pre></div><p><code>__new__</code>の使い所としてはインスタンス生成のカスタマイズが考えられるだろう。
+例えば、以下はシングルトン（複数のインスタンスで同一性が保証されたクラス）の実装例である。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># __new__を使ったシングルトンの実装</span>
+
+<span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Singleton</span>:
+    <span style=color:#ff79c6>def</span> __new__(cls):
+        <span style=color:#ff79c6>if</span> <span style=color:#ff79c6>not</span> <span style=color:#8be9fd;font-style:italic>hasattr</span>(cls, <span style=color:#f1fa8c>&#34;_instance&#34;</span>):
+            cls<span style=color:#ff79c6>.</span>_instance <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>super</span>()<span style=color:#ff79c6>.</span>__new__(cls)
+
+        <span style=color:#ff79c6>return</span> cls<span style=color:#ff79c6>.</span>_instance
+
+
+<span style=color:#ff79c6>print</span>(Singleton() <span style=color:#ff79c6>is</span> Singleton()) <span style=color:#6272a4># True</span>
+</code></pre></div><p>他の用途としては、タプルやNumPyなどイミュータブルなオブジェクトのサブクラスが考えられる。</p><h2 id=メタクラスはtypeのカスタマイズ>メタクラスはtypeのカスタマイズ</h2><p>メタクラスの役割はクラス生成そのもののカスタマイズである。
+そもそも、クラスは以下のように組み込みクラスの<code>type</code>を使って<code>type(name, bases, dict)</code>で動的に生成できる。
+つまり、通常のクラス定義は以下と等価である。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># typeによるクラス定義</span>
+
+<span style=color:#ff79c6>def</span> __init__(self, arg):
+    self<span style=color:#ff79c6>.</span>arg <span style=color:#ff79c6>=</span> arg
+
+
+Class <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>type</span>(<span style=color:#f1fa8c>&#34;Class&#34;</span>, (<span style=color:#8be9fd;font-style:italic>object</span>,), {<span style=color:#f1fa8c>&#34;__init__&#34;</span>: __init__})
+</code></pre></div><p>これは、<code>type</code>がメタクラス、つまり<strong>インスタンスがクラスとなるようなクラス</strong>であることを表している。
+<code>metaclass</code>を使ったクラス定義は、カスタマイズされた<code>type</code>を使ってクラス生成することに相当する。
+つまり、<code>metaclass=meta</code>の場合のクラス生成は以下のように行われることを意味する。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># metaclass=metaの場合のクラス定義</span>
+
+Class <span style=color:#ff79c6>=</span> meta(<span style=color:#f1fa8c>&#34;Class&#34;</span>, (<span style=color:#8be9fd;font-style:italic>object</span>,), {<span style=color:#f1fa8c>&#34;__init__&#34;</span>: __init__})
+</code></pre></div><p>また、以下が通常のクラス定義と等価であることが分かるはずである。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># metaclass=typeの場合のクラス定義</span>
+
+<span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Class</span>(metaclass<span style=color:#ff79c6>=</span><span style=color:#8be9fd;font-style:italic>type</span>):
+    <span style=color:#ff79c6>def</span> __init__(self, arg):
+        self<span style=color:#ff79c6>.</span>arg <span style=color:#ff79c6>=</span> arg
+</code></pre></div><p>メタクラスの使い所は、<code>__new__</code>や<code>__init__</code>では行えないようなクラスに対するメソッド等の動的な追加・変更が考えられるだろう。
+例えば、以下はキャメルケースのメソッド名をスネークケースに変更する実装例である。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># メソッド名のスネークケース化</span>
+
+<span style=color:#6272a4># install from PyPI</span>
+<span style=color:#ff79c6>from</span> inflection <span style=color:#ff79c6>import</span> underscore
+
+
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>snake_case</span>(name, bases, <span style=color:#8be9fd;font-style:italic>dict</span>):
+    new_dict <span style=color:#ff79c6>=</span> {underscore(k): v <span style=color:#ff79c6>for</span> k, v <span style=color:#ff79c6>in</span> <span style=color:#8be9fd;font-style:italic>dict</span><span style=color:#ff79c6>.</span>items()}
+    <span style=color:#ff79c6>return</span> <span style=color:#8be9fd;font-style:italic>type</span>(name, bases, new_dict)
+
+
+<span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Example</span>(metaclass<span style=color:#ff79c6>=</span>snake_case):
+    <span style=color:#ff79c6>def</span> <span style=color:#50fa7b>CamelCaseMethod</span>(self):
+        <span style=color:#ff79c6>pass</span>
+
+
+obj <span style=color:#ff79c6>=</span> Example()
+obj<span style=color:#ff79c6>.</span>camel_case_method() <span style=color:#6272a4># ok</span>
+obj<span style=color:#ff79c6>.</span>CamelCaseMethod() <span style=color:#6272a4># AttributeError</span>
+</code></pre></div><p>ちなみに、最終的に<code>type</code>が呼ばれさえすれば良いので、<code>metaclass</code>に渡すのはcallableなオブジェクトであればクラスでなくてもかまわない。
+実際、上の例では関数を<code>metaclass</code>に渡している（ただし、<code>type</code>のインスタンスを返すだけなのでメタクラスではないことに注意）。</p><h2 id=メタクラスとクラスデコレータ>メタクラスとクラスデコレータ</h2><p>クラスを動的に変更するもう一つの方法としてクラスデコレータがある。
+これは、<strong>クラスを受け取りクラスを返す関数</strong>として実装し、関数デコレータと同様にクラス定義の上にデコレートするものである。
+例えば、先ほどのスネークケースの実装例は、クラスデコレータでは以下のように書ける。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># メソッド名のスネークケース化（クラスデコレータ版）</span>
+
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>snake_case</span>(cls):
+    <span style=color:#ff79c6>for</span> name, obj <span style=color:#ff79c6>in</span> <span style=color:#8be9fd;font-style:italic>vars</span>(cls)<span style=color:#ff79c6>.</span>items():
+        new_name <span style=color:#ff79c6>=</span> underscore(name)
+
+        <span style=color:#ff79c6>if</span> name <span style=color:#ff79c6>!=</span> new_name:
+            <span style=color:#8be9fd;font-style:italic>setattr</span>(cls, new_name, obj)
+            <span style=color:#8be9fd;font-style:italic>delattr</span>(cls, name)
+
+    <span style=color:#ff79c6>return</span> cls
+
+
+@snake_case
+<span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Example</span>:
+    <span style=color:#ff79c6>def</span> <span style=color:#50fa7b>CamelCaseMethod</span>(self):
+        <span style=color:#ff79c6>pass</span>
+</code></pre></div><p>生成されたクラスをカスタマイズする用途であれば、クラスデコレータは直感的で分かりやすい。
+例えば、Python 3.7で導入された<a class=link href=https://docs.python.org/ja/3/library/dataclasses.html target=_blank rel=noopener>データクラス</a>ではクラスデコレータが使われている。
+私見だが、引数を持つデコレータを作成することができるのもクラスデコレータの利点かもしれない。</p><p>一方、クラスデコレータでカスタマイズできるのは主にクラス変数とインスタンスメソッドであり、クラス自身が持つメソッド（つまりクラスを<code>type</code>のインスタンスと見たときのインスタンスメソッド）を変更することはできない。
+例えば、クラスを<code>print</code>したときの表示はメタクラスを使わないとカスタマイズできない。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># クラスのreprのカスタマイズ</span>
+
+<span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Meta</span>(<span style=color:#8be9fd;font-style:italic>type</span>):
+    <span style=color:#ff79c6>def</span> __repr__(self):
+        <span style=color:#ff79c6>return</span> self<span style=color:#ff79c6>.</span>__name__ <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#34;!&#34;</span>
+
+
+<span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Custom</span>(metaclass<span style=color:#ff79c6>=</span>Meta):
+    <span style=color:#ff79c6>pass</span>
+
+
+<span style=color:#ff79c6>print</span>(Custom) <span style=color:#6272a4># Custom!</span>
+</code></pre></div><p>また、動的なクラス継承などもメタクラスの範疇である。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># クラス名に応じた継承先の変更</span>
+
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>meta</span>(name, bases, <span style=color:#8be9fd;font-style:italic>dict</span>):
+    <span style=color:#ff79c6>return</span> <span style=color:#8be9fd;font-style:italic>type</span>(name, (<span style=color:#8be9fd;font-style:italic>eval</span>(name<span style=color:#ff79c6>.</span>lower()), <span style=color:#ff79c6>*</span>bases), <span style=color:#8be9fd;font-style:italic>dict</span>)
+
+
+<span style=color:#ff79c6>class</span> <span style=color:#50fa7b>List</span>(metaclass<span style=color:#ff79c6>=</span>meta):
+    <span style=color:#ff79c6>pass</span>
+
+
+<span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Tuple</span>(metaclass<span style=color:#ff79c6>=</span>meta):
+    <span style=color:#ff79c6>pass</span>
+
+
+<span style=color:#ff79c6>print</span>(List([<span style=color:#bd93f9>0</span>, <span style=color:#bd93f9>1</span>, <span style=color:#bd93f9>2</span>])) <span style=color:#6272a4># [0, 1, 2]</span>
+<span style=color:#ff79c6>print</span>(Tuple([<span style=color:#bd93f9>0</span>, <span style=color:#bd93f9>1</span>, <span style=color:#bd93f9>2</span>])) <span style=color:#6272a4># (0, 1, 2)</span>
+</code></pre></div><p>このようにメタクラスの方が強力だが、反面どうしても抽象的な概念が登場して分かりづらくなるので、なるべくクラスデコレータまでに留めておきたいところ。
+また、関数デコレータと同様に、クラスをもとにした新しいクラスを返すのであればクラスデコレータでも可能なので、表面上はこれで良い場合も多いだろう。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#6272a4># クラスのreprのカスタマイズ（クラスデコレータ版）</span>
+
+<span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Meta</span>(<span style=color:#8be9fd;font-style:italic>type</span>):
+    <span style=color:#ff79c6>def</span> __repr__(self):
+        <span style=color:#ff79c6>return</span> self<span style=color:#ff79c6>.</span>__name__ <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#34;!&#34;</span>
+
+
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>deco</span>(cls):
+    <span style=color:#ff79c6>return</span> Meta(cls<span style=color:#ff79c6>.</span>__name__, cls<span style=color:#ff79c6>.</span>__bases__, <span style=color:#8be9fd;font-style:italic>dict</span>(cls<span style=color:#ff79c6>.</span>__dict__))
+
+
+@deco
+<span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Custom</span>:
+    <span style=color:#ff79c6>pass</span>
+
+
+<span style=color:#ff79c6>print</span>(Custom) <span style=color:#6272a4># Custom!</span>
+</code></pre></div><h2 id=まとめ>まとめ</h2><ul><li><code>__new__</code>はインスタンス生成のカスタマイズ</li><li><code>__init__</code>はインスタンスのカスタマイズ</li><li>メタクラスは<code>type</code>のカスタマイズ</li><li>クラスデコレータは<code>type</code>インスタンス（＝クラス）のカスタマイズ</li></ul><h2 id=references>References</h2><ul><li><a class=link href=https://docs.python.org/ja/3/library/functions.html#type target=_blank rel=noopener>組み込み関数 — Python 3.9.1 ドキュメント</a></li><li><a class=link href=https://docs.python.org/ja/3/library/dataclasses.html target=_blank rel=noopener>dataclasses &mdash; データクラス — Python 3.9.1 ドキュメント</a></li><li><a class=link href=https://python.ms/new/#_1-new-%E3%81%A8-init-%E3%81%AE%E9%81%95%E3%81%84 target=_blank rel=noopener>Python の <strong>new</strong> ってなに？ | 民主主義に乾杯</a></li><li><a class=link href=https://python.ms/metaclass/#_1-%E3%83%A1%E3%82%BF%E3%82%AF%E3%83%A9%E3%82%B9 target=_blank rel=noopener>Python のメタクラスとクラスデコレータってなに？ | 民主主義に乾杯</a></li><li><a class=link href=https://pypi.org/project/inflection/ target=_blank rel=noopener>inflection · PyPI</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/python/>Python</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY 4.0</span></section><section class=article-time><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span class=article-time--modified>Last updated on 2020-12-30 10:46 +0900</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title>Related contents</h2><div class=related-contents><div class="flex article-list--tile"><article class=has-image><a href=/posts/31/><div class=article-image><img src=/posts/31/image.926232f66487c58f832a1d26d1fb8449_huab13b69368037f19875f50bf380cdf80_225815_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-kmIy9mSHxY+DKh0m0fuESQ=="></div><div class=article-details><h2 class=article-title>Pythonのデータクラスのようにxarrayのデータ構造を定義する</h2></div></a></article><article class=has-image><a href=/posts/30/><div class=article-image><img src=/posts/30/image.e931310d3fdb2122af11dd6f5bb3db51_hu66482708b471a939ec4727ecbb2ebafe_277748_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-6TExDT/bISKvEd1vW7PbUQ=="></div><div class=article-details><h2 class=article-title>Python dictionary の KeyError に keys 一覧を表示させる</h2></div></a></article><article class=has-image><a href=/posts/29/><div class=article-image><img src=/posts/29/image.926232f66487c58f832a1d26d1fb8449_huab13b69368037f19875f50bf380cdf80_225815_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-kmIy9mSHxY+DKh0m0fuESQ=="></div><div class=article-details><h2 class=article-title>Pandasとセットで理解するxarray：データ構造編</h2></div></a></article><article><a href=/posts/26/><div class=article-details><h2 class=article-title>Matplotlib で図の余白のみを透明にする</h2></div></a></article><article><a href=/posts/25/><div class=article-details><h2 class=article-title>Python のタイムゾーン関連まとめ</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+2018 -
+2021 astropenguin</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=2.3.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script><script>(function(){const customFont=document.createElement('link');customFont.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";customFont.type="text/css";customFont.rel="stylesheet";document.head.appendChild(customFont);}());</script><script>twemoji.parse(document.body);</script></body></html>
